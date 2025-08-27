@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | Zaika Express</title>
+   <style>
+    :root {
+      --rosewater: #f8c0c8;
+      --ivory: #efe7d3;
+      --lilac: #6a3183;
+      --pewter: #ece3f0;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Georgia', serif;
+      background: var(--ivory);
+      color: #333;
+    }
+     nav {
+    background-color: var(--rosewater);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  }
+    nav .logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--lilac);
+    font-family: "Georgia", serif;
+  }
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.2rem;
+    margin: 0;
+    padding: 0;
+  }
+
+  nav ul li a {
+    text-decoration: none;
+    font-weight: 500;
+    color: #333;
+    padding: 0.4rem 0.8rem;
+    border-radius: 6px;
+    transition: background 0.3s ease;
+  }
+
+  nav ul li a:hover,
+  nav ul li a.active {
+    background-color: var(--lilac);
+    color: #fff;
+  }
+
+
+    /* Gradient header like the terms page */
+    header {
+      background: linear-gradient(90deg, #db9ac9, #6a3183);
+      padding: 2rem 1rem;
+      text-align: center;
+      border-bottom-left-radius: 30px;
+      border-bottom-right-radius: 30px;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      color: white;
+      font-weight: bold;
+    }
+    header p {
+      margin: 0.5rem 0 0;
+      color: #f3e8f3;
+      font-size: 1.1rem;
+    }
+
+    /* Page container */
+    .container {
+      max-width: 800px;
+      margin: -1.5rem auto 2rem;
+      padding: 0 1rem;
+    }
+
+    /* White card blocks */
+    .card {
+      background: white;
+      border-radius: 15px;
+      padding: 30px;
+      margin-bottom: 2rem;
+      box-shadow: 0 6px 14px rgba(106, 49, 131, 0.2);
+    }
+    .card h2 {
+      margin-top: 0;
+      color: var(--lilac);
+      font-size: 1.6rem;
+      font-weight: bold;
+    }
+    .card p {
+      color: #444;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    /* Form styling */
+    form label {
+      display: block;
+      margin-top: 1rem;
+      color: var(--lilac);
+      font-size: 1rem;
+      font-weight: bold;
+    }
+    form input,
+    form textarea {
+      width: 100%;
+      padding: 0.8rem;
+      margin-top: 0.3rem;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      font-size: 1rem;
+      font-family: inherit;
+    }
+    form textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+    form button {
+      margin-top: 1.5rem;
+      padding: 0.8rem 1.5rem;
+      background: var(--lilac);
+      color: white;
+      font-size: 1.1rem;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background 0.3s;
+      font-family: inherit;
+    }
+    form button:hover {
+      background: #4a1f63;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+       background-color: var(--rosewater);
+      font-family: 'Georgia', serif;
+      color: var(--lilac);
+      font-size: 0.9rem;
+    }
+    footer a {
+      color: var(--lilac);
+     
+      text-decoration: none;
+       margin: 0 5px;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      header h1 { font-size: 2rem; }
+      .card { padding: 25px; }
+    }
+  </style>
+</head>
+<body>
+   <!-- Navbar -->
+  <nav>
+    <div class="logo">Zaika Express</div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="offers.html">Offers</a></li>
+      <li><a href="about.html" class="active">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header>
+    <h1>Zaika Express</h1>
+   
+  </header>
+  <br>
+  <br>
+
+  <div class="container">
+    <h2>Contact Us</h2>
+    <p>If you have any questions, feedback, or special requests, feel free to reach out to us. We’d love to hear from you!</p>
+    
+    <form>
+      <label for="name">Your Name</label>
+      <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+      <label for="email">Your Email</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+      <label for="message">Your Message</label>
+      <textarea id="message" name="message" placeholder="Type your message here..." required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+
+    <h3 style="margin-top:40px; color:var(--lilac);">Our Contact Details</h3>
+    <p><strong>📍 Address:</strong> Zaika Express, MG Road, Pune, India</p>
+    <p><strong>📞 Phone:</strong> +91 98765 43210</p>
+    <p><strong>📧 Email:</strong> support@zaikaexpress.com</p>
+  </div>
+
+  <footer>
+    <p>© 2025 Zaika Express | All Rights Reserved</p>
+    <a href="#">Privacy Policy</a> | 
+    <a href="#">Terms & Conditions</a> | 
+    <a href="#">About</a>
+  </footer>
+
+</body>
+</html>
