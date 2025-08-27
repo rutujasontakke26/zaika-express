@@ -19,6 +19,45 @@ body {
   background-color: var(--ivory);
   color: #333;
 }
+nav {
+    background-color: var(--rosewater);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  }
+    nav .logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--lilac);
+    font-family: "Georgia", serif;
+  }
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.2rem;
+    margin: 0;
+    padding: 0;
+  }
+
+  nav ul li a {
+    text-decoration: none;
+    font-weight: 500;
+    color: #333;
+    padding: 0.4rem 0.8rem;
+    border-radius: 6px;
+    transition: background 0.3s ease;
+  }
+
+  nav ul li a:hover,
+  nav ul li a.active {
+    background-color: var(--lilac);
+    color: #fff;
+  }
 
 /* Gradient header */
 header {
@@ -97,7 +136,17 @@ footer {
 </style>
 </head>
 <body>
-
+<!-- Navbar -->
+  <nav>
+    <div class="logo">Zaika Express</div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="offers.html">Offers</a></li>
+      <li><a href="about.html" class="active">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
   <header>
     <h1>Zaika Express – Offers & Discounts</h1>
   </header>
