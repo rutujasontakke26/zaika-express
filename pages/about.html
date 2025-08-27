@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us | Zaika Express</title>
+  <style>
+    :root {
+      --rosewater: #f8c0c8;
+      --ivory: #efe7d3;
+      --lilac: #6a3183;
+      --pewter: #ece3f0;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      background-color: var(--ivory);
+      color: #333;
+    }
+
+    nav {
+      background-color: var(--rosewater);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav .logo {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--lilac);
+      font-family: "Georgia", serif;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      font-weight: 500;
+      color: #333;
+      padding: 0.3rem 0.6rem;
+      border-radius: 6px;
+      transition: background 0.3s ease;
+    }
+
+    nav ul li a:hover,
+    nav ul li a.active {
+      background-color: var(--lilac);
+      color: #fff;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, var(--rosewater), var(--pewter));
+      text-align: center;
+      padding: 4rem 2rem;
+      border-bottom: 3px solid var(--lilac);
+    }
+
+    .hero h1 {
+      font-family: "Georgia", serif;
+      color: var(--lilac);
+      font-size: 2.8rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .hero p {
+      color: #444;
+      font-size: 1.1rem;
+      opacity: 0.85;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 3rem auto;
+      padding: 0 1.5rem;
+    }
+
+    .section {
+      background-color: var(--pewter);
+      padding: 2rem;
+      border-radius: 12px;
+      margin-bottom: 2rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    .section h2 {
+      color: var(--lilac);
+      font-family: "Georgia", serif;
+      margin-top: 0;
+      font-size: 1.8rem;
+    }
+
+    .section p {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    .highlight {
+      color: var(--lilac);
+      font-weight: 600;
+    }
+
+    footer {
+      background-color: var(--rosewater);
+      text-align: center;
+      padding: 2rem 1rem;
+      border-top: 2px solid var(--lilac);
+      margin-top: 3rem;
+    }
+
+    footer a {
+      color: var(--lilac);
+      text-decoration: none;
+      margin: 0 0.8rem;
+      font-weight: 500;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    footer p {
+      margin: 0.5rem 0;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <div class="logo">Zaika Express</div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="offers.html">Offers</a></li>
+      <li><a href="about.html" class="active">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>About Us</h1>
+    <p>Delighting taste buds with elegance, flavor, and tradition.</p>
+  </section>
+
+  <!-- Main Content -->
+  <div class="container">
+    <div class="section">
+      <h2>Our Journey</h2>
+      <p><span class="highlight">Zaika Express</span> was born from a love for Indian flavors and a passion for service. We started as a small kitchen with a big dream: to bring handcrafted meals to your doorstep, served fresh, warm, and full of heart.</p>
+    </div>
+
+    <div class="section">
+      <h2>Our Mission</h2>
+      <p>We believe that food is an experience. That’s why we carefully curate every recipe, use locally sourced ingredients, and deliver with care. Our mission is to make every meal memorable—no matter where you're enjoying it from.</p>
+    </div>
+
+    <div class="section">
+      <h2>Our Chefs</h2>
+      <p>With years of culinary expertise, our chefs blend modern techniques with authentic recipes. From classic biryanis to contemporary fusion delights, they pour creativity and love into every dish.</p>
+    </div>
+
+    <div class="section">
+      <h2>Why Zaika Express?</h2>
+      <p>We are not just a food delivery brand—we're a flavor movement. <span class="highlight">Zaika</span> means taste, and we live up to it every day. With a unique blend of rich heritage, comforting meals, and a pastel-inspired digital experience, Zaika Express is your go-to for reliable, delicious, and beautiful food delivery.</p>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Zaika Express — All Rights Reserved</p>
+    <p>
+      <a href="privacy.html">Privacy Policy</a> |
+      <a href="terms.html">Terms & Conditions</a> |
+      <a href="contact.html">Contact</a>
+    </p>
+  </footer>
+
+</body>
+</html>
