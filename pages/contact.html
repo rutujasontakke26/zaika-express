@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact Us | Zaika Express</title>
-  <style>
+   <style>
     :root {
       --rosewater: #f8c0c8;
       --ivory: #efe7d3;
@@ -13,106 +13,116 @@
     }
 
     body {
-      font-family: 'Georgia', serif;
       margin: 0;
+      font-family: 'Georgia', serif;
       background: var(--ivory);
       color: #333;
     }
 
-    /* Navbar */
+    /* Gradient header like the terms page */
     header {
-      background: var(--rosewater);
-      padding: 15px 30px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+      background: linear-gradient(90deg, #db9ac9, #6a3183);
+      padding: 2rem 1rem;
+      text-align: center;
+      border-bottom-left-radius: 30px;
+      border-bottom-right-radius: 30px;
     }
     header h1 {
       margin: 0;
-      font-size: 28px;
-      color: var(--lilac);
-    }
-    nav a {
-      margin: 0 12px;
-      text-decoration: none;
-      color: #333; 
-      font-size: 18px;
-    }
-    nav a.active {
-      background: var(--lilac);
+      font-size: 2.5rem;
       color: white;
-      padding: 5px 12px;
-      border-radius: 5px;
+      font-weight: bold;
+    }
+    header p {
+      margin: 0.5rem 0 0;
+      color: #f3e8f3;
+      font-size: 1.1rem;
     }
 
-    /* Container */
+    /* Page container */
     .container {
-      max-width: 900px;
-      margin: 50px auto;
+      max-width: 800px;
+      margin: -1.5rem auto 2rem;
+      padding: 0 1rem;
+    }
+
+    /* White card blocks */
+    .card {
       background: white;
-      padding: 40px;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      border-radius: 15px;
+      padding: 30px;
+      margin-bottom: 2rem;
+      box-shadow: 0 6px 14px rgba(106, 49, 131, 0.2);
     }
-
-    .container h2 {
-      font-size: 30px;
+    .card h2 {
+      margin-top: 0;
       color: var(--lilac);
-      margin-bottom: 25px;
-      text-align: center;
+      font-size: 1.6rem;
+      font-weight: bold;
+    }
+    .card p {
+      color: #444;
+      font-size: 1rem;
+      line-height: 1.6;
     }
 
-    .container p {
-      margin-bottom: 20px;
-      line-height: 1.8;
-      font-size: 18px;
-    }
-
-    /* Contact form */
-    form {
-      display: flex;
-      flex-direction: column;
-    }
-    label {
-      font-size: 16px;
-      margin: 10px 0 5px;
+    /* Form styling */
+    form label {
+      display: block;
+      margin-top: 1rem;
       color: var(--lilac);
+      font-size: 1rem;
+      font-weight: bold;
     }
-    input, textarea {
-      padding: 12px;
+    form input,
+    form textarea {
+      width: 100%;
+      padding: 0.8rem;
+      margin-top: 0.3rem;
       border: 1px solid #ccc;
-      border-radius: 8px;
-      font-size: 16px;
+      border-radius: 10px;
+      font-size: 1rem;
+      font-family: inherit;
     }
-    textarea {
+    form textarea {
       resize: vertical;
       min-height: 120px;
     }
-    button {
-      margin-top: 20px;
-      padding: 12px;
+    form button {
+      margin-top: 1.5rem;
+      padding: 0.8rem 1.5rem;
       background: var(--lilac);
       color: white;
-      font-size: 18px;
+      font-size: 1.1rem;
       border: none;
-      border-radius: 8px;
+      border-radius: 10px;
       cursor: pointer;
+      transition: background 0.3s;
+      font-family: inherit;
     }
-    button:hover {
-      background: #522565;
+    form button:hover {
+      background: #4a1f63;
     }
 
-    /* Footer */
     footer {
       text-align: center;
-      padding: 25px;
-      background: var(--pewter);
-      font-size: 16px;
+      padding: 2rem 1rem;
+       background-color: var(--rosewater);
+      font-family: 'Georgia', serif;
+      color: var(--lilac);
+      font-size: 0.9rem;
     }
     footer a {
-      margin: 0 8px;
-      text-decoration: none;
       color: var(--lilac);
+     
+      text-decoration: none;
+       margin: 0 5px;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      header h1 { font-size: 2rem; }
+      .card { padding: 25px; }
     }
   </style>
 </head>
@@ -120,14 +130,10 @@
 
   <header>
     <h1>Zaika Express</h1>
-    <nav>
-      <a href="#">Home</a>
-      <a href="#">Menu</a>
-      <a href="#">Offers</a>
-      <a href="#">About Us</a>
-      <a href="#" class="active">Contact</a>
-    </nav>
+   
   </header>
+  <br>
+  <br>
 
   <div class="container">
     <h2>Contact Us</h2>
