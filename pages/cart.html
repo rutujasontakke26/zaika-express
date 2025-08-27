@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Zaika Express | Your Cart</title>
+  <style>
+    :root {
+      --rosewater: #f8c0c8;
+      --ivory: #efe7d3;
+      --lilac: #6a3183;
+      --pewter: #ece3f0;
+    }
+    body {
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      background-color: var(--ivory);
+      color: #333;
+    }
+    header {
+      background-color: var(--lilac);
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+    main {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 1rem;
+    }
+    .cart {
+      background-color: var(--pewter);
+      border-radius: 10px;
+      padding: 2rem;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    }
+    .cart-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 0;
+      border-bottom: 1px solid #ccc;
+    }
+    .cart-item:last-child {
+      border-bottom: none;
+    }
+    .item-details {
+      flex: 1;
+    }
+    .item-name {
+      font-size: 1.2rem;
+      color: var(--lilac);
+    }
+    .item-price {
+      font-size: 1rem;
+      margin-top: 0.25rem;
+    }
+    .item-quantity {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .item-quantity button {
+      background-color: var(--rosewater);
+      border: none;
+      padding: 0.3rem 0.6rem;
+      font-size: 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+      user-select: none;
+    }
+    .cart-summary {
+      text-align: right;
+      margin-top: 2rem;
+      font-size: 1.2rem;
+    }
+    .checkout-btn {
+      margin-top: 1.5rem;
+      padding: 0.8rem 1.5rem;
+      background-color: var(--lilac);
+      color: white;
+      border: none;
+      font-size: 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .checkout-btn:hover {
+      background-color: #55266d;
+    }
+    .empty-cart {
+      text-align: center;
+      font-size: 1.2rem;
+      color: #777;
+      padding: 2rem;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      background-color: var(--rosewater);
+      font-family: "Georgia", serif;
+      font-size: 0.9rem;
+    }
+    @media (max-width: 600px) {
+      .cart-item {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .cart-summary {
+        text-align: left;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Your Cart</h1>
+</header>
+
+<main>
+  <div class="cart" id="cart">
+    <div class="cart-item" data-original-price="220">
+      <div class="item-details">
+        <div class="item-name">Paneer Butter Masala</div>
+        <div class="item-price">₹<span class="price">220</span></div>
+      </div>
+      <div class="item-quantity">
+        <button class="decrease">-</button>
+        <span class="quantity">1</span>
+        <button class="increase">+</button>
+      </div>
+    </div>
+
+    <div class="cart-item" data-original-price="80">
+      <div class="item-details">
+        <div class="item-name">Garlic Naan (x2)</div>
+        <div class="item-price">₹<span class="price">80</span></div>
+      </div>
+      <div class="item-quantity">
+        <button class="decrease">-</button>
+        <span class="quantity">1</span>
+        <button class="increase">+</button>
+      </div>
+    </div>
+
+    <div class="cart-summary">
+      <strong>Subtotal:</strong> ₹<span id="subtotal">300</span><br>
+      <strong>Delivery Fee:</strong> ₹<span id="delivery">30</span><br>
+      <strong>Total:</strong> ₹<span id="total">330</span>
+    </div>
+
+    <div style="text-align: right;">
+      <button class="checkout-btn">Proceed to Checkout</button>
+    </div>
+  </div>
+</main>
+
+<footer>
+  &copy; 2025 Zaika Express. Savor every bite, delivered right.
+</footer>
+
+<script>
+  // Wait until DOM loaded
+  document.addEventListener("DOMContentLoaded", () => {
+    const deliveryFee = 30;
+    const subtotalEl = document.getElementById('subtotal');
+    const totalEl = document.getElementById('total');
+    const cart = document.getElementById('cart');
+    const cartItems = cart.querySelectorAll('.cart-item');
+
+    function updateTotals() {
+      let subtotal = 0;
+      cartItems.forEach(item => {
+        const price = parseFloat(item.querySelector('.price').textContent);
+        subtotal += price;
+      });
+      subtotalEl.textContent = subtotal.toFixed(2);
+      totalEl.textContent = (subtotal + deliveryFee).toFixed(2);
+    }
+
+    cartItems.forEach(item => {
+      const increaseBtn = item.querySelector('.increase');
+      const decreaseBtn = item.querySelector('.decrease');
+      const priceEl = item.querySelector('.price');
+      const quantityEl = item.querySelector('.quantity');
+
+      const originalPrice = parseFloat(item.getAttribute('data-original-price'));
+      let quantity = 1;
+      let currentPrice = originalPrice;
+
+      increaseBtn.addEventListener('click', () => {
+        quantity *= 2; // Double quantity
+        currentPrice *= 2; // Double price
+        quantityEl.textContent = quantity;
+        priceEl.textContent = currentPrice.toFixed(2);
+        updateTotals();
+      });
+
+      decreaseBtn.addEventListener('click', () => {
+        if (quantity > 1) {
+          quantity /= 2; // Halve quantity
+          currentPrice /= 2; // Halve price
+          quantityEl.textContent = quantity;
+          priceEl.textContent = currentPrice.toFixed(2);
+          updateTotals();
+        }
+      });
+    });
+
+    updateTotals(); // initialize totals on page load
+  });
+</script>
+
+</body>
+</html>
