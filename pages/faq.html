@@ -1,134 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Zaika Express | FAQ</title>
+  <link rel="stylesheet" href="style.css">
   <style>
-:root {
-  --rosewater: #f8c0c8;
-  --ivory: #f6efe2;
-  --lilac: #6a3183;
-  --pewter: #ffffff;
-  --gradient: linear-gradient(135deg, #f8c0c8, #6a3183);
-}
+    /* FAQ Specific Styling */
+    .faq-container {
+      max-width: 900px;
+      margin: 3rem auto;
+      padding: 0 1.5rem;
+    }
 
-body {
-  margin: 0;
-  font-family: "Poppins", sans-serif;
-  background-color: var(--ivory);
-  color: #333;
-}
+    .faq {
+      background: white;
+      border-radius: 16px;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      overflow: hidden;
+      transition: box-shadow 0.3s ease;
+    }
 
-/* Header with gradient */
-header {
-  background: var(--gradient);
-  color: white;
-  padding: 3rem 1rem;
-  text-align: center;
-  border-bottom-left-radius: 30px;
-  border-bottom-right-radius: 30px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-}
+    .faq:hover {
+      box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+    }
 
-header h1 {
-  margin: 0;
-  font-size: 2.8rem;
-  font-weight: bold;
-}
+    .faq-question {
+      padding: 1.2rem 1.5rem;
+      background: var(--rosewater);
+      font-weight: 600;
+      cursor: pointer;
+      color: #333;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
 
-header p {
-  font-size: 1rem;
-  margin-top: 0.5rem;
-}
+    .faq-question span {
+      font-size: 1.2rem;
+      color: var(--lilac);
+      transition: transform 0.3s ease;
+    }
 
-main {
-  max-width: 900px;
-  margin: 2rem auto;
-  padding: 0 1rem;
-}
+    .faq-answer {
+      padding: 1rem 1.5rem;
+      display: none;
+      line-height: 1.6;
+      background: #fff;
+      color: #444;
+    }
 
-/* FAQ Cards */
-.faq-section {
-  background-color: transparent;
-}
+    .faq.active .faq-answer {
+      display: block;
+    }
 
-.faq {
-  background-color: var(--pewter);
-  border-radius: 12px;
-  padding: 1.5rem;
-  margin-bottom: 1.5rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  transition: transform 0.2s ease;
-}
-
-.faq:hover {
-  transform: translateY(-3px);
-}
-
-.faq h3 {
-  color: var(--lilac);
-  margin-bottom: 0.5rem;
-  font-size: 1.3rem;
-}
-
-.faq p {
-  font-size: 1rem;
-  line-height: 1.6;
-  color: #444;
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  padding: 2rem 1rem;
-  background-color: var(--rosewater);
-  font-family: "Georgia", serif;
-  font-size: 0.9rem;
-  color: #333;
-  border-top-left-radius: 30px;
-  border-top-right-radius: 30px;
-}
-</style>
+    .faq.active .faq-question span {
+      transform: rotate(90deg);
+    }
+  </style>
 </head>
 <body>
 
-  <header>
-    <h1>Zaika Express – Frequently Asked Questions</h1>
-  </header>
+  <!-- Navbar -->
+  <nav>
+    <div class="logo">Zaika Express</div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="offers.html">Offers</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="terms.html">Terms</a></li>
+      <li><a href="faq.html" style="background: var(--lilac); color: white;">FAQ</a></li>
+    </ul>
+  </nav>
 
-  <main>
-    <section class="faq-section">
-      <div class="faq">
-        <h3>🍱 What areas do you deliver to?</h3>
-        <p>We currently deliver to most urban areas in and around your city. You can check delivery availability by entering your ZIP code during checkout.</p>
-      </div>
-      <div class="faq">
-        <h3>⏰ What are your delivery hours?</h3>
-        <p>Our delivery hours are from 11:00 AM to 11:00 PM, seven days a week, including public holidays.</p>
-      </div>
-      <div class="faq">
-        <h3>💳 What payment methods do you accept?</h3>
-        <p>We accept all major credit/debit cards, UPI, wallets, and cash on delivery (COD) for selected areas.</p>
-      </div>
-      <div class="faq">
-        <h3>📦 How do I track my order?</h3>
-        <p>Once your order is placed, you'll receive a tracking link via SMS and email. You can also track it from your Zaika Express account dashboard.</p>
-      </div>
-      <div class="faq">
-        <h3>🍽 Can I customize my order?</h3>
-        <p>Yes! Many of our dishes allow customizations like spice level, ingredient removals, or extras. Just look for customization options before adding to your cart.</p>
-      </div>
-      <div class="faq">
-        <h3>📞 How can I contact support?</h3>
-        <p>You can reach our customer care at 1800-ZAIKA-24 or email us at support@zaikaexpress.com for assistance.</p>
-      </div>
-    </section>
-  </main>
+  <!-- Hero Banner -->
+  <section class="hero">
+    <h1>Frequently Asked Questions</h1>
+    <p>Find answers to common questions about Zaika Express</p>
+  </section>
 
+  <!-- FAQ Section -->
+  <div class="faq-container">
+    <div class="faq">
+      <div class="faq-question">
+        What is the delivery time? <span>▶</span>
+      </div>
+      <div class="faq-answer">
+        Delivery usually takes 30-45 minutes depending on your location and traffic conditions. You will get live updates once your order is confirmed.
+      </div>
+    </div>
+
+    <div class="faq">
+      <div class="faq-question">
+        What payment methods do you accept? <span>▶</span>
+      </div>
+      <div class="faq-answer">
+        We accept UPI, Debit/Credit cards, Net Banking, and secure gateways like Razorpay and PayPal.
+      </div>
+    </div>
+
+    <div class="faq">
+      <div class="faq-question">
+        Can I cancel my order? <span>▶</span>
+      </div>
+      <div class="faq-answer">
+        Orders once confirmed cannot be canceled. However, in case of any issues, please contact our support team immediately.
+      </div>
+    </div>
+
+    <div class="faq">
+      <div class="faq-question">
+        Do you offer refunds? <span>▶</span>
+      </div>
+      <div class="faq-answer">
+        Refunds are applicable only for incorrect or incomplete orders. Please report the issue within 24 hours of delivery.
+      </div>
+    </div>
+
+    <div class="faq">
+      <div class="faq-question">
+        Is there a minimum order value? <span>▶</span>
+      </div>
+      <div class="faq-answer">
+        Yes, the minimum order value is ₹150 for delivery. There is no minimum order for self-pickup.
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
   <footer>
-    &copy; 2025 Zaika Express. Serving happiness, one dish at a time.
+    <p>&copy; 2025 Zaika Express | All Rights Reserved</p>
+    <p>
+      <a href="privacy.html">Privacy Policy</a> |
+      <a href="terms.html">Terms & Conditions</a> |
+      <a href="contact.html">Contact</a>
+    </p>
   </footer>
+
+  <!-- FAQ Toggle Script -->
+  <script>
+    const faqs = document.querySelectorAll('.faq');
+    faqs.forEach(faq => {
+      faq.querySelector('.faq-question').addEventListener('click', () => {
+        faq.classList.toggle('active');
+      });
+    });
+  </script>
 
 </body>
 </html>

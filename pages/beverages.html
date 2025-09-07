@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zaika Express | Beverages</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Menu Grid */
+    .menu-container {
+      max-width: 1200px;
+      margin: 3rem auto;
+      padding: 0 1.5rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2rem;
+    }
+
+    .menu-card {
+      background: #fff;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .menu-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+    }
+
+    .menu-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-bottom: 3px solid var(--rosewater);
+    }
+
+    .menu-card h3 {
+      font-family: "Georgia", serif;
+      color: var(--lilac);
+      margin: 1rem;
+      font-size: 1.4rem;
+    }
+
+    .menu-card p {
+      margin: 0 1rem 1rem;
+      color: #555;
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    .menu-card .price {
+      font-weight: bold;
+      color: #333;
+      margin: 0 1rem 1rem;
+    }
+
+    .order-btn {
+      display: inline-block;
+      background: var(--lilac);
+      color: #fff;
+      text-decoration: none;
+      padding: 0.7rem 1.2rem;
+      border-radius: 8px;
+      margin: 0 1rem 1.5rem;
+      font-weight: 500;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    .order-btn:hover {
+      background: #4a1f5f;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <div class="logo">Zaika Express</div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="offers.html">Offers</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="terms.html">Terms</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Banner -->
+  <section class="hero">
+    <h1>Beverages Menu</h1>
+    <p>Refreshing Indian Elixirs</p>
+  </section>
+
+  <!-- Desserts Menu -->
+  <div class="menu-container">
+    <div class="menu-card">
+      <img src="images/badammilk.png" alt="Badam Doodh">
+      <h3>Badam Doodh</h3>
+      <p>Soft fried dumplings soaked in saffron-scented sugar syrup.</p>
+      <p class="price">₹120</p>
+      <a href="#" class="order-btn">Order Now</a>
+    </div>
+
+    <div class="menu-card">
+      <img src="images/buttermilk.png" alt="Chaas">
+      <h3>Chaas</h3>
+      <p>Delicate cottage cheese patties soaked in creamy saffron milk.</p>
+      <p class="price">₹250</p>
+      <a href="#" class="order-btn">Order Now</a>
+    </div>
+
+    <div class="menu-card">
+      <img src="images/jaljeera.png" alt="Jaljeera">
+      <h3>Jaljeera</h3>
+      <p>Traditional Indian ice cream with pistachios and cardamom.</p>
+      <p class="price">₹50</p>
+      <a href="#" class="order-btn">Order Now</a>
+    </div>
+
+    <div class="menu-card">
+      <img src="images/thandai.png" alt="Thandai">
+      <h3>Thandai</h3>
+      <p>Rich and gooey chocolate brownie served warm with ice cream.</p>
+      <p class="price">₹130</p>
+      <a href="#" class="order-btn">Order Now</a>
+    </div>
+
+     <div class="menu-card">
+      <img src="images/simplelassi.png" alt="Simple Lassi">
+      <h3>Simple Lassi</h3>
+      <p>Soft, spongy cheese balls soaked in light sugar syrup.</p>
+      <p class="price">₹110</p>
+      <a href="#" class="order-btn">Order Now</a>
+    </div>
+
+     <div class="menu-card">
+      <img src="images/chaha.png" alt="Masala Chai">
+      <h3>Masala Chai</h3>
+      <p>Chilled dessert drink with vermicelli, basil seeds, rose syrup, and ice cream.</p>
+      <p class="price">₹115</p>
+      <a href="#" class="order-btn">Order Now</a>
+    </div>
+
+     <div class="menu-card">
+      <img src="images/mastanii.png" alt="Mango Mastani">
+      <h3>Mango Mastani</h3>
+      <p>Crispy, deep-fried spirals soaked in saffron-infused sugar syrup.</p>
+      <p class="price">₹180</p>
+      <a href="#" class="order-btn">Order Now</a>
+    </div>
+
+     <div class="menu-card">
+      <img src="images/ussjuice.png" alt="Ganne Ka Juice">
+      <h3>Ganne Ka Juice</h3>
+      <p>Steamed dumpling filled with sweet coconut and jaggery on the inside and rice flour layer on the outside.</p>
+      <p class="price">₹380</p>
+      <a href="#" class="order-btn">Order Now</a>
+    </div>
+
+    <div class="menu-card">
+      <img src="images/solkadhi.png" alt="SolKadhi">
+      <h3>SolKadhi</h3>
+      <p>Steamed dumpling filled with sweet coconut and jaggery on the inside and rice flour layer on the outside.</p>
+      <p class="price">₹380</p>
+      <a href="#" class="order-btn">Order Now</a>
+    </div>
+
+    <div class="menu-card">
+      <img src="images/coke.png" alt="Coka Cola">
+      <h3>Coka Cola</h3>
+      <p>Steamed dumpling filled with sweet coconut and jaggery on the inside and rice flour layer on the outside.</p>
+      <p class="price">₹380</p>
+      <a href="#" class="order-btn">Order Now</a>
+    </div>
+
+    <div class="menu-card">
+      <img src="images/filter.png" alt="Filter Coffee">
+      <h3>Filter Coffee</h3>
+      <p>Steamed dumpling filled with sweet coconut and jaggery on the inside and rice flour layer on the outside.</p>
+      <p class="price">₹380</p>
+      <a href="#" class="order-btn">Order Now</a>
+    </div>
+
+    <div class="menu-card">
+      <img src="images/choco.png" alt="Chocolate Milkshake">
+      <h3>Chocolate Milkshake</h3>
+      <p>Steamed dumpling filled with sweet coconut and jaggery on the inside and rice flour layer on the outside.</p>
+      <p class="price">₹380</p>
+      <a href="#" class="order-btn">Order Now</a>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Zaika Express | All Rights Reserved</p>
+    <p>
+      <a href="privacy.html">Privacy Policy</a> |
+      <a href="faq.html">FAQ</a> |
+      <a href="contact.html">Contact</a>
+    </p>
+  </footer>
+
+</body>
+</html>

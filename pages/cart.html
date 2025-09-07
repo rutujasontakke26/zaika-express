@@ -1,242 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Zaika Express | Your Cart</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zaika Express | Cart</title>
+  <link rel="stylesheet" href="style.css">
   <style>
-  :root {
-    --rosewater: #f8c0c8;
-    --ivory: #efe7d3;
-    --lilac: #6a3183;
-    --pewter: #ece3f0;
-  }
-  body {
-    margin: 0;
-    font-family: 'Georgia', serif;
-    background-color: var(--ivory);
-    color: #333;
-  }
-  header {
-    background: linear-gradient(90deg, #db9ac9, #6a3183);
-    color: white;
-    padding: 2.5rem 2.5rem;
-    text-align: center;
-    border-bottom-left-radius: 30px;
-    border-bottom-right-radius: 30px;
-  }
-  header h1 {
-    margin: 0;
-    font-weight: bold;
-    font-size: 2rem;
-  }
-  main {
-    max-width: 900px;
-    margin: 2rem auto;
-    padding: 0 1rem;
-  }
-  .cart-item {
-    background-color: white;
-    border-radius: 15px;
-    padding: 1.5rem 2rem;
-    margin-bottom: 1.5rem;
-    box-shadow: 0 6px 12px rgba(106, 49, 131, 0.2);
-    font-family: 'Poppins', sans-serif;
-  }
-  .cart-item h2 {
-    margin: 0 0 0.4rem;
-    font-weight: 700;
-    color: var(--lilac);
-    font-size: 1.2rem;
-  }
-  .cart-item p {
-    margin: 0 0 0.7rem;
-    font-size: 0.9rem;
-    line-height: 1.3;
-    color: #444;
-  }
-  .quantity-control {
-    display: flex;
-    align-items: center;
-    gap: 0.6rem;
-  }
-  .quantity-control button {
-    background-color: var(--rosewater);
-    border: none;
-    border-radius: 8px;
-    padding: 0.3rem 0.7rem;
-    font-weight: 700;
-    color: var(--lilac);
-    cursor: pointer;
-    user-select: none;
-    font-size: 1.2rem;
-    transition: background-color 0.2s ease;
-  }
-  .quantity-control button:hover {
-    background-color: #f5a9c1;
-  }
-  .quantity-control span {
-    font-weight: 700;
-    font-size: 1.1rem;
-    color: var(--lilac);
-    width: 30px;
-    text-align: center;
-  }
-  .price {
-    font-weight: 600;
-    font-size: 1rem;
-    color: var(--lilac);
-  }
-  .cart-summary {
-    font-family: 'Georgia', serif;
-    font-weight: 700;
-    font-size: 1.25rem;
-    color: var(--lilac);
-    text-align: right;
-    margin-top: 5rem;
-  }
-  .checkout-btn {
-    margin-top: 1.5rem;
-    float: right;
-    background-color: var(--lilac);
-    color: white;
-    border: none;
-    border-radius: 15px;
-    padding: 0.9rem 2rem;
-    font-weight: 700;
-    font-size: 1.1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    font-family: 'Poppins', sans-serif;
-  }
-  .checkout-btn:hover {
-    background-color: #4a1f63;
-  }
-  footer {
-    text-align: center;
-    margin-top: 3rem;
-    padding: 2.5rem 2.5rem;
-    background-color: var(--rosewater);
-    font-family: 'Georgia', serif;
-    font-size: 0.9rem;
-    color: #6a3183;
-    clear: both;
-  }
-  @media (max-width: 800px) {
-    .cart-summary, .checkout-btn {
-      text-align: center;
-      float: none;
-      width: 100%;
+    /* Cart Specific Styling */
+    .cart-container {
+      max-width: 1100px;
+      margin: 3rem auto;
+      padding: 0 1.5rem;
     }
-  }
-</style>
+
+    .cart-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 2rem;
+    }
+
+    .cart-table th, .cart-table td {
+      padding: 1rem;
+      text-align: center;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .cart-table th {
+      background: var(--rosewater);
+      font-family: "Georgia", serif;
+      color: #333;
+    }
+
+    .cart-table td img {
+      width: 70px;
+      border-radius: 8px;
+    }
+
+    .cart-total {
+      text-align: right;
+      font-size: 1.3rem;
+      margin-top: 1rem;
+      color: var(--lilac);
+      font-weight: 600;
+    }
+
+    .cart-actions {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 2rem;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .btn {
+      padding: 0.8rem 1.6rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    .btn-continue {
+      background: #ddd;
+      color: #333;
+    }
+
+    .btn-continue:hover {
+      background: #bbb;
+      transform: translateY(-2px);
+    }
+
+    .btn-checkout {
+      background: var(--lilac);
+      color: white;
+    }
+
+    .btn-checkout:hover {
+      background: #522565;
+      transform: translateY(-2px);
+    }
+  </style>
 </head>
 <body>
 
-<header>
-  <h1>Your Cart</h1>
-</header>
+  <!-- Navbar -->
+  <nav>
+    <div class="logo">Zaika Express</div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="offers.html">Offers</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="cart.html" style="background: var(--lilac); color: white;">Cart</a></li>
+    </ul>
+  </nav>
 
-<main>
-  <div class="cart" id="cart">
-    <div class="cart-item" data-original-price="220">
-      <div class="item-details">
-        <div class="item-name">Paneer Butter Masala</div>
-        <div class="item-price">₹<span class="price">220</span></div>
-      </div>
-      <div class="item-quantity">
-        <button class="decrease">-</button>
-        <span class="quantity">1</span>
-        <button class="increase">+</button>
-      </div>
+  <!-- Hero Banner -->
+  <section class="hero">
+    <h1>Your Cart</h1>
+    <p>Review your order before checkout</p>
+  </section>
+
+  <!-- Cart Section -->
+  <div class="cart-container">
+    <table class="cart-table">
+      <thead>
+        <tr>
+          <th>Item</th>
+          <th>Dish</th>
+          <th>Quantity</th>
+          <th>Price</th>
+          <th>Total</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><img src="./images/chickenbiryani.jpeg" alt=" Hyderabadi biryani"></td>
+          <td>Hyderabadi Biryani</td>
+          <td>2</td>
+          <td>₹250</td>
+          <td>₹500</td>
+        </tr>
+        <tr>
+          <td><img src="./images/butterchicken.jpeg" alt="Butter Chicken"></td>
+          <td>Butter Chicken</td>
+          <td>1</td>
+          <td>₹300</td>
+          <td>₹300</td>
+        </tr>
+        <tr>
+          <td><img src="./images/lassi.jpeg" alt="Sweet Lassi"></td>
+          <td>Sweet Lassi</td>
+          <td>2</td>
+          <td>₹160</td>
+          <td>₹160</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="cart-total">
+      Total: ₹800
     </div>
 
-    <div class="cart-item" data-original-price="80">
-      <div class="item-details">
-        <div class="item-name">Garlic Naan (x2)</div>
-        <div class="item-price">₹<span class="price">80</span></div>
-      </div>
-      <div class="item-quantity">
-        <button class="decrease">-</button>
-        <span class="quantity">1</span>
-        <button class="increase">+</button>
-      </div>
-    </div>
-
-    <div class="cart-summary">
-      <strong>Subtotal:</strong> ₹<span id="subtotal">300</span><br><br>
-      <strong>Delivery Fee:</strong> ₹<span id="delivery">30</span><br><br>
-      <strong>Total:</strong> ₹<span id="total">330</span>
-    </div>
-
-    <div style="text-align: right;">
-      <button class="checkout-btn">Proceed to Checkout</button>
+    <div class="cart-actions">
+      <a href="menu.html"><button class="btn btn-continue">← Continue Shopping</button></a>
+      <a href="checkout.html"><button class="btn btn-checkout">Proceed to Checkout →</button></a>
     </div>
   </div>
-</main>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<footer>
-  &copy; 2025 Zaika Express. Savor every bite, delivered right.
-</footer>
 
-<script>
-  // Wait until DOM loaded
-  document.addEventListener("DOMContentLoaded", () => {
-    const deliveryFee = 30;
-    const subtotalEl = document.getElementById('subtotal');
-    const totalEl = document.getElementById('total');
-    const cart = document.getElementById('cart');
-    const cartItems = cart.querySelectorAll('.cart-item');
-
-    function updateTotals() {
-      let subtotal = 0;
-      cartItems.forEach(item => {
-        const price = parseFloat(item.querySelector('.price').textContent);
-        subtotal += price;
-      });
-      subtotalEl.textContent = subtotal.toFixed(2);
-      totalEl.textContent = (subtotal + deliveryFee).toFixed(2);
-    }
-
-    cartItems.forEach(item => {
-      const increaseBtn = item.querySelector('.increase');
-      const decreaseBtn = item.querySelector('.decrease');
-      const priceEl = item.querySelector('.price');
-      const quantityEl = item.querySelector('.quantity');
-
-      const originalPrice = parseFloat(item.getAttribute('data-original-price'));
-      let quantity = 1;
-      let currentPrice = originalPrice;
-
-      increaseBtn.addEventListener('click', () => {
-        quantity *= 2; // Double quantity
-        currentPrice *= 2; // Double price
-        quantityEl.textContent = quantity;
-        priceEl.textContent = currentPrice.toFixed(2);
-        updateTotals();
-      });
-
-      decreaseBtn.addEventListener('click', () => {
-        if (quantity > 1) {
-          quantity /= 2; // Halve quantity
-          currentPrice /= 2; // Halve price
-          quantityEl.textContent = quantity;
-          priceEl.textContent = currentPrice.toFixed(2);
-          updateTotals();
-        }
-      });
-    });
-
-    updateTotals(); // initialize totals on page load
-  });
-</script>
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Zaika Express | All Rights Reserved</p>
+    <p>
+      <a href="privacy.html">Privacy Policy</a> |
+      <a href="faq.html">FAQ</a> |
+      <a href="contact.html">Contact</a>
+    </p>
+  </footer>
 
 </body>
 </html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zaika Express | Indian Breads</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Page-specific tweaks */
+    .menu-section {
+      max-width: 1100px;
+      margin: 3rem auto;
+      padding: 0 1.5rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+
+    .menu-card {
+      background: white;
+      border-radius: 16px;
+      padding: 1.5rem;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .menu-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+    }
+
+    .menu-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 1rem;
+    }
+
+    .menu-card h3 {
+      margin: 0.5rem 0;
+      color: var(--lilac);
+      font-family: "Georgia", serif;
+    }
+
+    .menu-card p {
+      font-size: 0.95rem;
+      margin-bottom: 0.8rem;
+      line-height: 1.5;
+    }
+
+    .price {
+      font-weight: 600;
+      color: #444;
+    }
+      
+      .order-btn {
+      display: inline-block;
+      background: var(--lilac);
+      color: #fff;
+      text-decoration: none;
+      padding: 0.7rem 1.2rem;
+      border-radius: 8px;
+      margin: 0 1rem 1.5rem;
+      font-weight: 500;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    .order-btn:hover {
+      background: #4a1f5f;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <div class="logo">Zaika Express</div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="menu.html" style="background: var(--lilac); color: white;">Menu</a></li>
+      <li><a href="offers.html">Offers</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="terms.html">Terms</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Banner -->
+  <section class="hero">
+    <h1>Indian Breads</h1>
+    <p>Freshly made, soft & flavorful breads to complete your meal</p>
+  </section>
+
+  <!-- Menu Section -->
+  <div class="menu-section">
+    <div class="menu-card">
+      <img src="images/butternaan.jpeg" alt="Butter Naan">
+      <h3>Butter Naan</h3>
+      <p>Soft, fluffy naan brushed with rich butter – the perfect companion for curries.</p>
+      <p class="price">₹60</p>
+      <a href="#" class="order-btn">Order Now</a>
+    </div>
+
+    <div class="menu-card">
+      <img src="images/Roti (tandoori).jpeg" alt="Tandoori Roti">
+      <h3>Tandoori Roti</h3>
+      <p>Whole wheat flatbread baked in a traditional tandoor for a smoky flavor.</p>
+      <p class="price">₹40</p>
+      <a href="#" class="order-btn">Order Now</a>
+    </div>
+
+    <div class="menu-card">
+      <img src="images/Delicious Garlic Naan Recipe!.jpeg" alt="Garlic Naan">
+      <h3>Garlic Naan</h3>
+      <p>Classic naan infused with fresh garlic and coriander for extra flavor.</p>
+      <p class="price">₹70</p>
+      <a href="#" class="order-btn">Order Now</a>
+    </div>
+
+    <div class="menu-card">
+      <img src="images/lachhaparatha.jpeg" alt="Lachha Paratha">
+      <h3>Lachha Paratha</h3>
+      <p>Layered, crispy yet soft paratha, made with love for flaky goodness.</p>
+      <p class="price">₹55</p>
+      <a href="#" class="order-btn">Order Now</a>
+    </div>
+
+    <div class="menu-card">
+      <img src="images/missiroti.jpeg" alt="Missi Roti">
+      <h3>Missi Roti</h3>
+      <p>Nutritious roti made with a mix of wheat flour and gram flour, spiced lightly.</p>
+      <p class="price">₹50</p>
+      <a href="#" class="order-btn">Order Now</a>
+    </div>
+
+    <div class="menu-card">
+      <img src="images/stuffedkulche.jpeg" alt="Stuffed Kulcha">
+      <h3>Stuffed Kulcha</h3>
+      <p>Soft kulcha stuffed with spiced potatoes or paneer, baked golden.</p>
+      <p class="price">₹80</p>
+      <a href="#" class="order-btn">Order Now</a>
+    </div>
+
+    <div class="menu-card">
+      <img src="images/chapati.jpeg" alt="Chapati">
+      <h3>Chapati</h3>
+      <p>a soft, thin, circular, unleavened flatbread made from whole wheat flour (atta).</p>
+      <p class="price">₹40</p>
+     <a href="#" class="order-btn">Order Now</a>
+    </div>
+    
+    <div class="menu-card">
+      <img src="images/bhakri.jpeg" alt="Bhakri">
+      <h3>Bhakri</h3>
+      <p>Srustic traditional, thick, unleavened Bajra flatbread.</p>
+      <p class="price">₹50</p>
+      <a href="#" class="order-btn">Order Now</a>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Zaika Express | All Rights Reserved</p>
+    <p>
+      <a href="privacy.html">Privacy Policy</a> |
+      <a href="faq.html">FAQ</a> |
+      <a href="contact.html">Contact</a>
+    </p>
+  </footer>
+
+</body>
+</html>
