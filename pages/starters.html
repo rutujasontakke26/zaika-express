@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zaika Express | Starters</title>
+  <style>
+    /* Theme Colors */
+    :root {
+      --rosewater: #f8c0c8;
+      --ivory: #efe7d3;
+      --lilac: #d3b6e0;
+      --plum: #7d387d;
+      --beige: #f2e8cf;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: var(--beige);
+    }
+
+    /* Navbar */
+    .navbar {
+      background: var(--rosewater);
+      display: flex;
+      justify-content: space-between;
+      padding: 15px 40px;
+      align-items: center;
+    }
+    .navbar h1 {
+      margin: 0;
+      font-size: 24px;
+      font-weight: bold;
+      color: black;
+    }
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+    }
+    .navbar ul li {
+      margin-left: 20px;
+    }
+    .navbar ul li a {
+      text-decoration: none;
+      color: black;
+      padding: 6px 12px;
+      border-radius: 6px;
+      transition: background 0.3s;
+    }
+    .navbar ul li a:hover,
+    .navbar ul li a.active {
+      background: var(--plum);
+      color: white;
+    }
+
+    /* Banner */
+    .banner {
+      background: linear-gradient(to right, var(--lilac), var(--plum));
+      color: white;
+      text-align: center;
+      padding: 50px 20px;
+      border-bottom-left-radius: 40px;
+      border-bottom-right-radius: 40px;
+    }
+    .banner h2 {
+      font-size: 36px;
+      margin: 0;
+    }
+    .banner p {
+      margin: 10px 0 0;
+    }
+
+    /* Menu Section */
+    .menu-container {
+      padding: 40px 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .menu-item {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.3s;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .menu-item:hover {
+      transform: translateY(-5px);
+    }
+    .menu-item img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+    .menu-info {
+      padding: 15px;
+      text-align: center;
+    }
+    .menu-info h3 {
+      margin: 10px 0 5px;
+      color: var(--plum);
+    }
+    .menu-info p {
+      margin: 0;
+      font-size: 14px;
+      color: #555;
+    }
+    .menu-info span {
+      display: block;
+      margin: 8px 0;
+      font-weight: bold;
+      color: #222;
+    }
+    .order-btn {
+      display: inline-block;
+      background: var(--plum);
+      color: white;
+      padding: 8px 16px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 14px;
+      transition: background 0.3s;
+    }
+    .order-btn:hover {
+      background: #5a275a;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <h1>Zaika Express</h1>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="starters.html" class="active">Starters</a></li>
+      <li><a href="maincourse.html">Main Course</a></li>
+       <li><a href="biryani-specials.html">Biryani Specials</a></li>
+      <li><a href="desserts.html">Desserts</a></li>
+      <li><a href="beverages.html">Beverages</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- Banner -->
+  <div class="banner">
+    <h2>Starters</h2>
+    <p>Kickstart your meal with our delicious range of appetizers</p>
+  </div>
+
+  <!-- Menu Grid (Sample 3 out of 20 items) -->
+  <div class="menu-container">
+
+    <div class="menu-item">
+      <img src="images/paneer-tikka.png" alt="Paneer Tikka">
+      <div class="menu-info">
+        <h3>Paneer Tikka</h3>
+        <p>Grilled paneer cubes with spices</p>
+        <span>₹150</span>
+        <a href="cart.html?item=Paneer Tikka" class="order-btn">Order Now</a>
+      </div>
+    </div>
+
+    <div class="menu-item">
+      <img src="images/spring-roll.png" alt="Spring Rolls">
+      <div class="menu-info">
+        <h3>Spring Rolls</h3>
+        <p>Crispy rolls stuffed with veggies</p>
+        <span>₹100</span>
+        <a href="cart.html?item=Spring Rolls" class="order-btn">Order Now</a>
+      </div>
+     </div>
+
+    <div class="menu-item">
+      <img src="images/samosa.png" alt="samosa">
+      <div class="menu-info">
+        <h3>Samosa</h3>
+        <p> Crispy Samosa</p>
+        <span>₹20</span>
+        <a href="cart.html?item=Samosa" class="order-btn">Order Now</a>
+      </div>
+    </div>
+    
+       <div class="menu-item">
+      <img src="images/paneer-pizza.png" alt="paneer-pizza">
+      <div class="menu-info">
+        <h3>Paneer-Pizza</h3>
+        <p> Cheesy and delicious</p>
+        <span>₹200</span>
+        <a href="cart.html?item=paneer-pizza" class="order-btn">Order Now</a>
+      </div>
+       </div>
+     <div class="menu-item">
+      <img src="images/cheese-balls.png" alt="cheese-balls">
+      <div class="menu-info">
+        <h3>Cheese-Balls</h3>
+        <p> Crispy and Cheesy</p>
+        <span>₹180</span>
+        <a href="cart.html?item=cheese-balls" class="order-btn">Order Now</a>
+      </div>
+     </div>
+      <div class="menu-item">
+      <img src="images/french-fries.png" alt="french-fries">
+      <div class="menu-info">
+        <h3>French-Fries</h3>
+        <p>Crispy and Testy</p>
+        <span>₹180</span>
+        <a href="cart.html?item=french-fries" class="order-btn">Order Now</a>
+      </div>
+      </div>
+       <div class="menu-item">
+      <img src="images/sabudana vada.png" alt="sabudana vada">
+      <div class="menu-info">
+        <h3>Sabudana Vada</h3>
+        <p>Golden Fritters</p>
+        <span>₹15</span>
+        <a href="cart.html?item=sabudana vada" class="order-btn">Order Now</a>
+      </div>
+      </div>
+      <div class="menu-item">
+      <img src="images/masala-papad.png" alt="masala-papad">
+      <div class="menu-info">
+        <h3>Masala Papad</h3>
+        <p>Spicy and Crunchy</p>
+        <span>₹30</span>
+        <a href="cart.html?item=masala-papad" class="order-btn">Order Now</a>
+      </div>
+      </div>
+        <div class="menu-item">
+      <img src="images/hara-bhara-kabab.png" alt="hara-bhara-kabab">
+      <div class="menu-info">
+        <h3>Hara-Bhara-Kabab</h3>
+        <p>Soft and delicious</p>
+        <span>₹25</span>
+        <a href="cart.html?item=hara-bhara-kabab" class="order-btn">Order Now</a>
+      </div>
+      </div> 
+        <div class="menu-item">
+      <img src="images/chicken-lolipop.png" alt="chicken-lolipop">
+      <div class="menu-info">
+        <h3>Chicken-Lolipop</h3>
+        <p>Soft and Juicy</p>
+        <span>₹300</span>
+        <a href="cart.html?item=chicken-lolipop" class="order-btn">Order Now</a>
+      </div>
+      </div>  
+        <div class="menu-item">
+      <img src="images/chicken-shwarma.png" alt="chicken-shwarma">
+      <div class="menu-info">
+        <h3>Chicken-shwarma</h3>
+        <p>Stuffed wrap with chicken and veggies</p>
+        <span>₹100</span>
+        <a href="cart.html?item=chicken-shwarma" class="order-btn">Order Now</a>
+      </div>
+      </div>  
+        <div class="menu-item">
+      <img src="images/chicken-tandoori.png" alt="chicken-tandoori">
+      <div class="menu-info">
+        <h3>Chicken-Tandoori</h3>
+        <p>Tendar and Juicy</p>
+        <span>₹600</span>
+        <a href="cart.html?item=chicken-tandoori" class="order-btn">Order Now</a>
+      </div>
+      </div>
+       
+  </div>
+</body>
+</html>
