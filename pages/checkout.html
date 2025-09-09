@@ -6,87 +6,74 @@
   <title>Zaika Express | Checkout</title>
   <link rel="stylesheet" href="style.css">
   <style>
-    /* Checkout Page Specific Styles */
+    /* Checkout-specific styling */
     .checkout-container {
-      max-width: 1100px;
+      max-width: 1000px;
       margin: 3rem auto;
-      display: grid;
-      grid-template-columns: 2fr 1fr;
-      gap: 2rem;
-      padding: 0 1.5rem;
-    }
-
-    .checkout-section {
       background: white;
-      border-radius: 16px;
       padding: 2rem;
+      border-radius: 16px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.08);
     }
 
-    .checkout-section h2 {
-      margin-top: 0;
+    .checkout-container h2 {
+      text-align: center;
+      margin-bottom: 2rem;
       color: var(--lilac);
       font-family: "Georgia", serif;
     }
 
-    .form-group {
-      margin-bottom: 1.2rem;
-    }
-
-    .form-group label {
-      display: block;
-      margin-bottom: 0.5rem;
-      font-weight: 500;
-    }
-
-    .form-group input, 
-    .form-group textarea, 
-    .form-group select {
-      width: 100%;
-      padding: 0.7rem;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      font-size: 1rem;
-    }
-
-    .cart-summary table {
+    table {
       width: 100%;
       border-collapse: collapse;
+      margin-bottom: 2rem;
     }
 
-    .cart-summary th, .cart-summary td {
-      padding: 0.8rem;
-      text-align: left;
-      border-bottom: 1px solid #eee;
-    }
-
-    .cart-summary th {
-      background: var(--pewter);
-    }
-
-    .total {
-      font-weight: bold;
-      font-size: 1.2rem;
-      color: var(--lilac);
-    }
-
-    .btn-primary {
-      display: inline-block;
-      width: 100%;
+    th, td {
       padding: 1rem;
-      background: var(--lilac);
-      color: white;
-      border: none;
-      border-radius: 10px;
+      border-bottom: 1px solid #ddd;
+      text-align: center;
+    }
+
+    th {
+      background: var(--pewter);
+      color: #333;
+    }
+
+    .qty-input {
+      width: 60px;
+      padding: 5px;
+      text-align: center;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+
+    .summary {
+      text-align: right;
       font-size: 1.2rem;
-      font-weight: bold;
-      cursor: pointer;
-      transition: 0.3s ease;
       margin-top: 1rem;
     }
 
-    .btn-primary:hover {
-      background: #522566;
+    .summary strong {
+      color: var(--lilac);
+    }
+
+    .checkout-btn {
+      display: block;
+      margin: 2rem auto 0;
+      padding: 1rem 2rem;
+      background: var(--lilac);
+      color: white;
+      font-size: 1.1rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    .checkout-btn:hover {
+      background: #4c2260;
     }
   </style>
 </head>
@@ -104,88 +91,54 @@
     </ul>
   </nav>
 
-  <!-- Hero -->
+  <!-- Hero Banner -->
   <section class="hero">
     <h1>Checkout</h1>
-    <p>Complete your order with ease</p>
+    <p>Review your order before payment</p>
   </section>
 
   <!-- Checkout Container -->
   <div class="checkout-container">
-    
-    <!-- Billing Details -->
-    <div class="checkout-section">
-      <h2>Billing Details</h2>
-      <form>
-        <div class="form-group">
-          <label for="name">Full Name</label>
-          <input type="text" id="name" placeholder="Enter your full name" required>
-        </div>
+    <h2>Your Cart</h2>
 
-        <div class="form-group">
-          <label for="email">Email Address</label>
-          <input type="email" id="email" placeholder="Enter your email" required>
-        </div>
+    <table>
+      <thead>
+        <tr>
+          <th>Item</th>
+          <th>Price (₹)</th>
+          <th>Quantity</th>
+          <th>Total (₹)</th>
+        </tr>
+      </thead>
+      <tbody id="cart-items">
+        <tr>
+          <td>Butter Chicken</td>
+          <td class="price">320</td>
+          <td><input type="number" value="1" min="1" class="qty-input"></td>
+          <td class="item-total">320</td>
+        </tr>
+        <tr>
+          <td>Hyderabadi Biryani</td>
+          <td class="price">250</td>
+          <td><input type="number" value="2" min="1" class="qty-input"></td>
+          <td class="item-total">500</td>
+        </tr>
+        <tr>
+          <td>Sweet Lassi</td>
+          <td class="price">80</td>
+          <td><input type="number" value="3" min="1" class="qty-input"></td>
+          <td class="item-total">240</td>
+        </tr>
+      </tbody>
+    </table>
 
-        <div class="form-group">
-          <label for="phone">Phone Number</label>
-          <input type="tel" id="phone" placeholder="Enter your phone number" required>
-        </div>
-
-        <div class="form-group">
-          <label for="address">Delivery Address</label>
-          <textarea id="address" rows="4" placeholder="Enter your delivery address" required></textarea>
-        </div>
-
-        <div class="form-group">
-          <label for="payment">Payment Method</label>
-          <select id="payment" required>
-            <option value="">-- Select Payment Method --</option>
-            <option value="cod">Cash on Delivery</option>
-            <option value="upi">UPI / Razorpay</option>
-            <option value="card">Credit / Debit Card</option>
-          </select>
-        </div>
-
-        <button type="submit" class="btn-primary">Place Order</button>
-      </form>
+    <div class="summary">
+      <p>Subtotal: ₹<span id="subtotal">1060</span></p>
+      <p>Tax (5%): ₹<span id="tax">53</span></p>
+      <p><strong>Total: ₹<span id="total">1113</span></strong></p>
     </div>
 
-    <!-- Cart Summary -->
-    <div class="checkout-section cart-summary">
-      <h2>Your Order</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Item</th>
-            <th>Qty</th>
-            <th>Price</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Butter Chicken</td>
-            <td>1</td>
-            <td>₹250</td>
-          </tr>
-          <tr>
-            <td>Hyderabadi Biryani</td>
-            <td>2</td>
-            <td>₹500</td>
-          </tr>
-          <tr>
-            <td>Sweet Lassi</td>
-            <td>2</td>
-            <td>₹160</td>
-          </tr>
-          <tr class="total">
-            <td colspan="2">Total</td>
-            <td>₹910</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-
+    <button class="checkout-btn">Proceed to Payment</button>
   </div>
 
   <!-- Footer -->
@@ -197,6 +150,37 @@
       <a href="contact.html">Contact</a>
     </p>
   </footer>
+
+  <!-- JavaScript -->
+  <script>
+    function updateCart() {
+      let rows = document.querySelectorAll("#cart-items tr");
+      let subtotal = 0;
+
+      rows.forEach(row => {
+        let price = parseFloat(row.querySelector(".price").textContent);
+        let qty = parseInt(row.querySelector(".qty-input").value);
+        let total = price * qty;
+
+        row.querySelector(".item-total").textContent = total.toFixed(2);
+        subtotal += total;
+      });
+
+      let tax = subtotal * 0.05; // 5% tax
+      let grandTotal = subtotal + tax;
+
+      document.getElementById("subtotal").textContent = subtotal.toFixed(2);
+      document.getElementById("tax").textContent = tax.toFixed(2);
+      document.getElementById("total").textContent = grandTotal.toFixed(2);
+    }
+
+    document.querySelectorAll(".qty-input").forEach(input => {
+      input.addEventListener("input", updateCart);
+    });
+
+    // Initialize totals on page load
+    updateCart();
+  </script>
 
 </body>
 </html>
