@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zaika Express | Starters</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Theme Colors */
+    :root {
+      --rosewater: #f8c0c8;
+      --ivory: #efe7d3;
+      --lilac: #d3b6e0;
+      --plum: #7d387d;
+      --beige: #f2e8cf;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: var(--beige);
+    }
+
+    /* Navbar */
+    .navbar {
+      background: var(--rosewater);
+      display: flex;
+      justify-content: space-between;
+      padding: 15px 40px;
+      align-items: center;
+    }
+    .navbar h1 {
+      margin: 0;
+      font-size: 24px;
+      font-weight: bold;
+      color: black;
+    }
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+    }
+    .navbar ul li {
+      margin-left: 20px;
+    }
+    .navbar ul li a {
+      text-decoration: none;
+      color: black;
+      padding: 6px 12px;
+      border-radius: 6px;
+      transition: background 0.3s;
+    }
+    .navbar ul li a:hover,
+    .navbar ul li a.active {
+      background: var(--plum);
+      color: white;
+    }
+
+    /* Banner */
+    .banner {
+      background: linear-gradient(to right, var(--lilac), var(--plum));
+      color: white;
+      text-align: center;
+      padding: 50px 20px;
+      border-bottom-left-radius: 40px;
+      border-bottom-right-radius: 40px;
+    }
+    .banner h2 {
+      font-size: 36px;
+      margin: 0;
+    }
+    .banner p {
+      margin: 10px 0 0;
+    }
+
+    /* Menu Section */
+    .menu-container {
+      padding: 40px 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .menu-item {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.3s;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .menu-item:hover {
+      transform: translateY(-5px);
+    }
+    .menu-item img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+    .menu-info {
+      padding: 15px;
+      text-align: center;
+    }
+    .menu-info h3 {
+      margin: 10px 0 5px;
+      color: var(--plum);
+    }
+    .menu-info p {
+      margin: 0;
+      font-size: 14px;
+      color: #555;
+    }
+    .menu-info span {
+      display: block;
+      margin: 8px 0;
+      font-weight: bold;
+      color: #222;
+    }
+    .order-btn {
+      display: inline-block;
+      background: var(--plum);
+      color: white;
+      padding: 8px 16px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 14px;
+      transition: background 0.3s;
+    }
+    .order-btn:hover {
+      background: #5a275a;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <h1>Zaika Express</h1>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="starters.html" class="active">Starters</a></li>
+      <li><a href="maincourse.html">Main Course</a></li>
+       <li><a href="biryani-specials.html">Biryani Specials</a></li>
+      <li><a href="desserts.html">Desserts</a></li>
+      <li><a href="beverages.html">Beverages</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- Banner -->
+  <div class="banner">
+    <h2>Main-Course</h2>
+    <p>Kickstart your meal with our delicious range of appetizers</p>
+  </div>
+
+  <!-- Menu Grid (Sample 3 out of 20 items) -->
+  <div class="menu-container">
+
+    <div class="menu-item">
+      <img src="images/butter-chicken.png" alt="butter-chicken">
+      <div class="menu-info">
+        <h3>Butter Chicken</h3>
+        <p>Chicken in buttery tomato sauce</p>
+        <span>₹350</span>
+        <a href="cart.html?item=butter-chicken" class="order-btn">Order Now</a>
+      </div>
+    </div>
+
+    <div class="menu-item">
+      <img src="images/paneer-butter-masala.png" alt="paneer-butter-masala">
+      <div class="menu-info">
+        <h3>Paneer Butter Masala</h3>
+        <p>Cottage cheese in rich tomato and butter gravy</p>
+        <span>₹150</span>
+        <a href="cart.html?item=paneer-butter-masala" class="order-btn">Order Now</a>
+      </div>
+     </div>
+
+    <div class="menu-item">
+      <img src="images/pav-bhaji.png" alt="pav-bhaji">
+      <div class="menu-info">
+        <h3>Pav-Bhaji</h3>
+        <p> Mashed vegetable curry served with buttered bread</p>
+        <span>₹100</span>
+        <a href="cart.html?item=pav-bhaji" class="order-btn">Order Now</a>
+      </div>
+    </div>
+    
+       <div class="menu-item">
+      <img src="images/daal-makhni.png" alt="daal-makhni">
+      <div class="menu-info">
+        <h3>Daal Makhni</h3>
+        <p> Creamy black lentils cooked with butter and spices</p>
+        <span>₹180</span>
+        <a href="cart.html?item=daal-makhni" class="order-btn">Order Now</a>
+      </div>
+       </div>
+     <div class="menu-item">
+      <img src="images/chicken-tikka-masala.png" alt="chicken-tikka-masala">
+      <div class="menu-info">
+        <h3>Chicken Tikka Masala</h3>
+        <p> Grilled chicken in creamy masala sauce</p>
+        <span>₹250</span>
+        <a href="cart.html?item=chicken Tikka Masala" class="order-btn">Order Now</a>
+      </div>
+     </div>
+      <div class="menu-item">
+      <img src="images/palak-paneer.png" alt="french-fries">
+      <div class="menu-info">
+        <h3>Palak-Paneer</h3>
+        <p>Cottage cheese in spinach curry</p>
+        <span>₹200</span>
+        <a href="cart.html?item=palak-paneer" class="order-btn">Order Now</a>
+      </div>
+      </div>
+       <div class="menu-item">
+      <img src="images/kadhai-paneer.png" alt="kadhai-paneer">
+      <div class="menu-info">
+        <h3>Kadhai Paneer</h3>
+        <p>Paneer cooked in a spiced tomato-onion gravy</p>
+        <span>₹270</span>
+        <a href="cart.html?item=kadhai-paneer" class="order-btn">Order Now</a>
+      </div>
+      </div>
+      <div class="menu-item">
+      <img src="images/veg-kolhapuri.png" alt="veg-kolhapuri">
+      <div class="menu-info">
+        <h3>veg-kolhapuri</h3>
+        <p>Spicy mixed vegetable curry from Maharashtra</p>
+        <span>₹280</span>
+        <a href="cart.html?item=veg-kolhapuri" class="order-btn">Order Now</a>
+      </div>
+      </div>
+        <div class="menu-item">
+      <img src="images/egg-curry.png" alt="egg-curry">
+      <div class="menu-info">
+        <h3>Egg Curry</h3>
+        <p>Boiled eggs in onion-tomato gravy</p>
+        <span>₹160</span>
+        <a href="cart.html?item=egg-curry" class="order-btn">Order Now</a>
+      </div>
+      </div> 
+        <div class="menu-item">
+      <img src="images/chicken-korma.png" alt="chicken-korma">
+      <div class="menu-info">
+        <h3>Chicken Korma</h3>
+        <p>SMild creamy chicken curryy</p>
+        <span>₹300</span>
+        <a href="cart.html?item=chicken-korma" class="order-btn">Order Now</a>
+      </div>
+      </div>  
+        <div class="menu-item">
+      <img src="images/chicken-afghani.png" alt="chicken-afghani">
+      <div class="menu-info">
+        <h3>Chicken Afghani</h3>
+        <p>Creamy cashew & cream-based chicken currys</p>
+        <span>₹300</span>
+        <a href="cart.html?item=chicken-afghani" class="order-btn">Order Now</a>
+      </div>
+      </div>  
+        <div class="menu-item">
+      <img src="images/chicken-handi.png" alt="chicken-handi">
+      <div class="menu-info">
+        <h3>Chicken Handi</h3>
+        <p>Rich creamy chicken curry cooked in handi</p>
+        <span>₹400</span>
+        <a href="cart.html?item=chicken-tandoori" class="order-btn">Order Now</a>
+      </div>
+      </div>
+       
+  </div>
+</body>
+</html>
