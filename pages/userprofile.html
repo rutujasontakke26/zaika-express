@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zaika Express - User Profile</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <div class="logo">Zaika Express</div>
+    <ul>
+      <li><a href="index.html"><b>Home</b></a></li>
+      <li><a href="profile.html" class="active"><b>Profile</b></a></li>
+      <li><a href="contact.html"><b>Contact</b></a></li>
+      <li><a href="about.html"><b>About</b></a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <h1>Welcome Back!</h1>
+    <p>Manage your details, preferences & orders here.</p>
+  </section>
+
+  <!-- Profile Container -->
+  <div class="container">
+    <div class="card">
+      <h2>User Profile</h2>
+      <div style="display:flex; align-items:center; gap:2rem;">
+        <img src="images/user.png" height="70px" alt="User Avatar" style="border-radius:50%; box-shadow:0 4px 10px rgba(0,0,0,0.15);">
+        <div>
+          <p><strong>Name:</strong> Rutuja Sontakke</p>
+          <p><strong>Email:</strong> rutuja@gmail.com</p>
+          <p><strong>Phone:</strong> +91 9876543210</p>
+          <p><strong>Address:</strong> Nagar Kalyan road, Ahilya Nagar, Maharashtra, India</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Order History</h2>
+      <ul>
+        <li>🍛 Paneer Butter Masala with Naan - ₹250</li>
+        <li>🥘 Hyderabadi Biryani - ₹300</li>
+        <li>🥤 Sweet Lassi - ₹80</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Account Settings</h2>
+      <form>
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" value="Rutuja Sontakke"><br><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" value="rutuja@gmail.com"><br><br>
+
+        <label for="phone">Phone:</label><br>
+        <input type="text" id="phone" value="+91 9876543210"><br><br>
+
+        <button type="submit" style="padding:0.7rem 1.5rem; background:var(--lilac); color:white; border:none; border-radius:8px; cursor:pointer;">Save Changes</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Zaika Express | All Rights Reserved</p>
+    <p>
+      <a href="#">Facebook</a> | 
+      <a href="#">Instagram</a> | 
+      <a href="#">Twitter</a>
+    </p>
+  </footer>
+
+</body>
+</html>

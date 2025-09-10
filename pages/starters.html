@@ -4,12 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Zaika Express | Starters</title>
+  <link rel="stylesheet" href="style.css" />
   <style>
     /* Theme Colors */
     :root {
       --rosewater: #f8c0c8;
       --ivory: #efe7d3;
-      --lilac: #d3b6e0;
+      --lilac: #9663ad;
       --plum: #7d387d;
       --beige: #f2e8cf;
     }
@@ -137,26 +138,27 @@
 <body>
 
   <!-- Navbar -->
-  <div class="navbar">
-    <h1>Zaika Express</h1>
+   <nav>
+    <div class="logo"> <img src="images/Z-modified.png" height="40px">&nbsp;&nbsp; Zaika Express</div>
     <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="starters.html" class="active">Starters</a></li>
-      <li><a href="maincourse.html">Main Course</a></li>
-       <li><a href="biryani-specials.html">Biryani Specials</a></li>
-      <li><a href="desserts.html">Desserts</a></li>
-      <li><a href="beverages.html">Beverages</a></li>
-      <li><a href="contact.html">Contact</a></li>
+      <li><a href="index.html"><b>Home</b></a></li>
+      <li><a href="menu.html" style="background: var(--lilac); color: white;"><b>Menu</b></a></li>
+      <li><a href="offers.html"><b>Offers</b></a></li>
+      <li><a href="contact.html"><b>Contact</b></a></li>
+      <li><a href="about.html"><b>About</b></a></li>
+      <li><a href="terms.html"><b>Terms</b></a></li>
+      <li><a href="login.html"><b>Login</b></a></li>
+      <li><a href="registration.html"><b>Register</b></a></li>
+      <img src="images/user.png" height="30px"><a href="userprofile.html"><b>Profile</b></a>
     </ul>
-  </div>
-
+  </nav>
   <!-- Banner -->
   <div class="banner">
     <h2>Starters</h2>
     <p>Kickstart your meal with our delicious range of appetizers</p>
   </div>
 
-  <!-- Menu Grid (Sample 3 out of 20 items) -->
+  <!-- Menu Grid -->
   <div class="menu-container">
 
     <div class="menu-item">
@@ -165,7 +167,7 @@
         <h3>Paneer Tikka</h3>
         <p>Grilled paneer cubes with spices</p>
         <span>₹150</span>
-        <a href="cart.html?item=Paneer Tikka" class="order-btn">Order Now</a>
+        <a href="cart.html?item=paneer-tikka" class="order-btn">Order Now</a>
       </div>
     </div>
 
@@ -175,102 +177,110 @@
         <h3>Spring Rolls</h3>
         <p>Crispy rolls stuffed with veggies</p>
         <span>₹100</span>
-        <a href="cart.html?item=Spring Rolls" class="order-btn">Order Now</a>
-      </div>
-     </div>
-
-    <div class="menu-item">
-      <img src="images/samosa.png" alt="samosa">
-      <div class="menu-info">
-        <h3>Samosa</h3>
-        <p> Crispy Samosa</p>
-        <span>₹20</span>
-        <a href="cart.html?item=Samosa" class="order-btn">Order Now</a>
+        <a href="cart.html?item=spring-rolls" class="order-btn">Order Now</a>
       </div>
     </div>
-    
-       <div class="menu-item">
-      <img src="images/paneer-pizza.png" alt="paneer-pizza">
+
+    <div class="menu-item">
+      <img src="images/samosa.png" alt="Samosa">
       <div class="menu-info">
-        <h3>Paneer-Pizza</h3>
-        <p> Cheesy and delicious</p>
+        <h3>Samosa</h3>
+        <p>Crispy fried pastry filled with potatoes</p>
+        <span>₹20</span>
+        <a href="cart.html?item=samosa" class="order-btn">Order Now</a>
+      </div>
+    </div>
+
+    <div class="menu-item">
+      <img src="images/paneer-pizza.png" alt="Paneer Pizza">
+      <div class="menu-info">
+        <h3>Paneer Pizza</h3>
+        <p>Cheesy delight topped with paneer</p>
         <span>₹200</span>
         <a href="cart.html?item=paneer-pizza" class="order-btn">Order Now</a>
       </div>
-       </div>
-     <div class="menu-item">
-      <img src="images/cheese-balls.png" alt="cheese-balls">
+    </div>
+
+    <div class="menu-item">
+      <img src="images/cheese-balls.png" alt="Cheese Balls">
       <div class="menu-info">
-        <h3>Cheese-Balls</h3>
-        <p> Crispy and Cheesy</p>
+        <h3>Cheese Balls</h3>
+        <p>Crispy & cheesy snack balls</p>
         <span>₹180</span>
         <a href="cart.html?item=cheese-balls" class="order-btn">Order Now</a>
       </div>
-     </div>
-      <div class="menu-item">
-      <img src="images/french-fries.png" alt="french-fries">
+    </div>
+
+    <div class="menu-item">
+      <img src="images/french-fries.png" alt="French Fries">
       <div class="menu-info">
-        <h3>French-Fries</h3>
-        <p>Crispy and Testy</p>
-        <span>₹180</span>
+        <h3>French Fries</h3>
+        <p>Golden and crispy fries</p>
+        <span>₹80</span>
         <a href="cart.html?item=french-fries" class="order-btn">Order Now</a>
       </div>
-      </div>
-       <div class="menu-item">
-      <img src="images/sabudana vada.png" alt="sabudana vada">
+    </div>
+
+    <div class="menu-item">
+      <img src="images/sabudana vada.png" alt="Sabudana Vada">
       <div class="menu-info">
         <h3>Sabudana Vada</h3>
-        <p>Golden Fritters</p>
-        <span>₹15</span>
-        <a href="cart.html?item=sabudana vada" class="order-btn">Order Now</a>
+        <p>Crispy fritters made with sago</p>
+        <span>₹50</span>
+        <a href="cart.html?item=sabudana-vada" class="order-btn">Order Now</a>
       </div>
-      </div>
-      <div class="menu-item">
-      <img src="images/masala-papad.png" alt="masala-papad">
+    </div>
+
+    <div class="menu-item">
+      <img src="images/masala-papad.png" alt="Masala Papad">
       <div class="menu-info">
         <h3>Masala Papad</h3>
-        <p>Spicy and Crunchy</p>
+        <p>Spicy papad topped with onion & masala</p>
         <span>₹30</span>
         <a href="cart.html?item=masala-papad" class="order-btn">Order Now</a>
       </div>
-      </div>
-        <div class="menu-item">
-      <img src="images/hara-bhara-kabab.png" alt="hara-bhara-kabab">
+    </div>
+
+    <div class="menu-item">
+      <img src="images/hara-bhara-kabab.png" alt="Hara Bhara Kabab">
       <div class="menu-info">
-        <h3>Hara-Bhara-Kabab</h3>
-        <p>Soft and delicious</p>
-        <span>₹25</span>
+        <h3>Hara Bhara Kabab</h3>
+        <p>Healthy spinach & peas kabab</p>
+        <span>₹120</span>
         <a href="cart.html?item=hara-bhara-kabab" class="order-btn">Order Now</a>
       </div>
-      </div> 
-        <div class="menu-item">
-      <img src="images/chicken-lolipop.png" alt="chicken-lolipop">
+    </div>
+
+    <div class="menu-item">
+      <img src="images/chicken-lolipop.png" alt="Chicken Lollipop">
       <div class="menu-info">
-        <h3>Chicken-Lolipop</h3>
-        <p>Soft and Juicy</p>
+        <h3>Chicken Lollipop</h3>
+        <p>Juicy & spicy fried chicken</p>
         <span>₹300</span>
-        <a href="cart.html?item=chicken-lolipop" class="order-btn">Order Now</a>
+        <a href="cart.html?item=chicken-lollipop" class="order-btn">Order Now</a>
       </div>
-      </div>  
-        <div class="menu-item">
-      <img src="images/chicken-shwarma.png" alt="chicken-shwarma">
+    </div>
+
+    <div class="menu-item">
+      <img src="images/chicken-shwarma.png" alt="Chicken Shawarma">
       <div class="menu-info">
-        <h3>Chicken-shwarma</h3>
-        <p>Stuffed wrap with chicken and veggies</p>
+        <h3>Chicken Shawarma</h3>
+        <p>Stuffed wrap with chicken & veggies</p>
         <span>₹100</span>
-        <a href="cart.html?item=chicken-shwarma" class="order-btn">Order Now</a>
+        <a href="cart.html?item=chicken-shawarma" class="order-btn">Order Now</a>
       </div>
-      </div>  
-        <div class="menu-item">
-      <img src="images/chicken-tandoori.png" alt="chicken-tandoori">
+    </div>
+
+    <div class="menu-item">
+      <img src="images/chicken-tandoori.png" alt="Chicken Tandoori">
       <div class="menu-info">
-        <h3>Chicken-Tandoori</h3>
-        <p>Tendar and Juicy</p>
+        <h3>Chicken Tandoori</h3>
+        <p>Tender, smoky & juicy chicken</p>
         <span>₹600</span>
         <a href="cart.html?item=chicken-tandoori" class="order-btn">Order Now</a>
       </div>
-      </div>
-       
+    </div>
+
   </div>
 </body>
 </html>

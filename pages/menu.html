@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zaika Express | Menu</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Extra styles for horizontal cards */
+    .menu-banner {
+      background: linear-gradient(135deg, var(--lilac), var(--rosewater));
+      color: white;
+      text-align: center;
+      padding: 4rem 2rem;
+      border-radius: 20px;
+      margin: 2rem auto;
+      max-width: 1100px;
+      box-shadow: 0 5px 18px rgba(0,0,0,0.2);
+    }
+
+    .menu-banner h1 {
+      font-size: 2.8rem;
+      font-family: "Georgia", serif;
+      margin-bottom: 1rem;
+    }
+
+    .menu-banner p {
+      font-size: 1.3rem;
+      opacity: 0.9;
+    }
+
+    .menu-section {
+      margin: 3rem 0;
+    }
+
+    .menu-section h2 {
+      text-align: center;
+      font-family: "Georgia", serif;
+      color: var(--lilac);
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .menu-card {
+      display: flex;
+      gap: 1rem;
+      background: white;
+      border-radius: 16px;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      align-items: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .menu-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+    }
+
+    .menu-images {
+      display: flex;
+      gap: 0.5rem;
+      flex: 1;
+    }
+
+    .menu-images img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 10px;
+      flex-shrink: 0;
+    }
+
+    .menu-info {
+      flex: 2;
+    }
+
+    .menu-info h3 {
+      margin: 0;
+      font-size: 1.5rem;
+      color: var(--lilac);
+    }
+
+    .menu-info p {
+      margin-top: 0.5rem;
+      font-size: 1rem;
+      color: #444;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav>
+    <div class="logo"> <img src="images/Z-modified.png" height="40px">&nbsp;&nbsp; Zaika Express</div>
+    <ul>
+      <li><a href="index.html"><b>Home</b></a></li>
+      <li><a href="menu.html"style="background: var(--lilac); color: white;"><b>Menu</b></a></li>
+      <li><a href="offers.html"><b>Offers</b></a></li>
+      <li><a href="contact.html"><b>Contact</b></a></li>
+      <li><a href="about.html"><b>About</b></a></li>
+      <li><a href="terms.html" ><b>Terms</b></a></li>
+      <li><a href="login.html"><b>Login</b></a></li>
+      <li><a href="registration.html"><b>Register</b></a></li>
+      <img src="images/user.png" height="30px"><a href="userprofile.html"><b>Profile</b></a>
+    </ul>
+  </nav>
+
+  <!-- Menu Banner -->
+  <section class="hero">
+    <h1>Our Delicious Menu</h1>
+    <p>Flavors that make you smile, meals that bring you closer!</p>
+  </section>
+
+  <!-- Menu Sections -->
+  <div class="container">
+
+    <div class="menu-section">
+      <h2><a href="starters.html">Starters</a></h2>
+      <div class="menu-card">
+        <div class="menu-images">
+          <img src="images/paneer-tikka.png" alt="Paneer Tikka">
+          <img src="images/spring-roll.png" alt="Spring ROlls">
+          <img src="images/cheese-balls.png" alt="Cheese Balls">
+        </div>
+        <div class="menu-info">
+          <h3>Crispy & Flavorful</h3>
+          <p>From hot soups to crunchy bites, our starters will kick off your feast in style.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="menu-section">
+      <h2><a href="main-course.html">Main Course</a></h2>
+      <div class="menu-card">
+        <div class="menu-images">
+          <img src="images/chicken-handi.png" alt="Chicken Handi">
+          <img src="images/egg-curry.png" alt="Egg Curry">
+          <img src="images/palak-paneer.png" alt="Palak Paneer">
+        </div>
+        <div class="menu-info">
+          <h3>Rich & Aromatic</h3>
+          <p>Our main courses celebrate authentic flavors with a perfect blend of spices and tradition.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="menu-section">
+      <h2><a href="desserts.html">Desserts</a></h2>
+      <div class="menu-card">
+        <div class="menu-images">
+          <img src="images/gulabjamun.jpeg" alt="Gulab Jamun">
+          <img src="images/badammilk.png" alt="Badam Doodh">
+          <img src="images/brownie.png" alt="Brownie">
+        </div>
+        <div class="menu-info">
+          <h3>Sweet Endings</h3>
+          <p>Delight in traditional and modern desserts that make every bite heavenly.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="menu-section">
+      <h2><a href="beverages.html">Beverages</a></h2>
+      <div class="menu-card">
+        <div class="menu-images">
+          <img src="images/chaha.png" alt="Masala Chai">
+          <img src="images/solkadhi.png" alt="Sol Kadhi">
+          <img src="images/ussjuice.png" alt="Ganne ka juice">
+        </div>
+        <div class="menu-info">
+          <h3>Refreshing Drinks</h3>
+          <p>From soothing lassi to energizing mocktails, we’ve got something for every mood.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="menu-section">
+      <h2><a href="breads.html">Indian Breads</a></h2>
+      <div class="menu-card">
+        <div class="menu-images">
+          <img src="images/bhakri.jpeg" alt="bhakri">
+          <img src="images/lachhaparatha.jpeg" alt="lachhaparatha">
+          <img src="images/chapati.jpeg" alt="chapati">
+        </div>
+        <div class="menu-info">
+          <h3>Soft & Fluffy</h3>
+          <p>Perfectly baked Indian breads to pair with every curry and delight your taste buds.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="menu-section">
+      <h2><a href="biryani-specials.html">Biryani Specials</a></h2>
+      <div class="menu-card">
+        <div class="menu-images">
+          <img src="images/kashmiri-biryani.png" alt="kashmiri Biryani">
+          <img src="images/muradabadi-biryani.png" alt="muradabadi Biryani">
+          <img src="images/veg-biryani.png" alt="Veg Biryani">
+        </div>
+        <div class="menu-info">
+          <h3>Royal Aroma</h3>
+          <p>Fluffy rice, rich spices, and a royal touch – Zaika Express biryanis are unmatched.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="menu-section">
+      <h2><a href="combos.html">Combo Meals</a></h2>
+      <div class="menu-card">
+        <div class="menu-images">
+          <img src="images/rajma.png" alt="Rajmal chawal">
+          <img src="images/chole.png" alt="Chole bhautre">
+          <img src="images/paav.png" alt="Pav bhaj">
+        </div>
+        <div class="menu-info">
+          <h3>Perfect Pairings</h3>
+          <p>Wholesome combos that bring together the best of Zaika Express flavors in one plate.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Zaika Express. All Rights Reserved.</p>
+    <p>
+      <a href="terms.html">Terms & Conditions</a> | 
+      <a href="privacy.html">Privacy Policy</a>
+    </p>
+  </footer>
+</body>
+</html>

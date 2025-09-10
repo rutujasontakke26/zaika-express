@@ -3,274 +3,211 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Zaika Express | Starters</title>
+  <title>Zaika Express | Biryani Specials</title>
+  <link rel="stylesheet" href="style.css">
   <style>
-    /* Theme Colors */
-    :root {
-      --rosewater: #f8c0c8;
-      --ivory: #efe7d3;
-      --lilac: #d3b6e0;
-      --plum: #7d387d;
-      --beige: #f2e8cf;
-    }
-
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: var(--beige);
-    }
-
-    /* Navbar */
-    .navbar {
-      background: var(--rosewater);
-      display: flex;
-      justify-content: space-between;
-      padding: 15px 40px;
-      align-items: center;
-    }
-    .navbar h1 {
-      margin: 0;
-      font-size: 24px;
-      font-weight: bold;
-      color: black;
-    }
-    .navbar ul {
-      list-style: none;
-      display: flex;
-      margin: 0;
-      padding: 0;
-    }
-    .navbar ul li {
-      margin-left: 20px;
-    }
-    .navbar ul li a {
-      text-decoration: none;
-      color: black;
-      padding: 6px 12px;
-      border-radius: 6px;
-      transition: background 0.3s;
-    }
-    .navbar ul li a:hover,
-    .navbar ul li a.active {
-      background: var(--plum);
-      color: white;
-    }
-
-    /* Banner */
-    .banner {
-      background: linear-gradient(to right, var(--lilac), var(--plum));
-      color: white;
-      text-align: center;
-      padding: 50px 20px;
-      border-bottom-left-radius: 40px;
-      border-bottom-right-radius: 40px;
-    }
-    .banner h2 {
-      font-size: 36px;
-      margin: 0;
-    }
-    .banner p {
-      margin: 10px 0 0;
-    }
-
-    /* Menu Section */
+    /* Menu Grid */
     .menu-container {
-      padding: 40px 20px;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
       max-width: 1200px;
-      margin: auto;
+      margin: 3rem auto;
+      padding: 0 1.5rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2rem;
     }
-    .menu-item {
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+
+    .menu-card {
+      background: #fff;
+      border-radius: 16px;
       overflow: hidden;
-      transition: transform 0.3s;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
-    .menu-item:hover {
-      transform: translateY(-5px);
+
+    .menu-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 8px 18px rgba(0,0,0,0.12);
     }
-    .menu-item img {
+
+    .menu-card img {
       width: 100%;
-      height: 180px;
+      height: 200px;
       object-fit: cover;
+      border-bottom: 3px solid var(--rosewater);
     }
-    .menu-info {
-      padding: 15px;
-      text-align: center;
+
+    .menu-card h3 {
+      font-family: "Georgia", serif;
+      color: var(--lilac);
+      margin: 1rem;
+      font-size: 1.4rem;
     }
-    .menu-info h3 {
-      margin: 10px 0 5px;
-      color: var(--plum);
-    }
-    .menu-info p {
-      margin: 0;
-      font-size: 14px;
+
+    .menu-card p {
+      margin: 0 1rem 1rem;
       color: #555;
+      font-size: 0.95rem;
+      line-height: 1.5;
     }
-    .menu-info span {
-      display: block;
-      margin: 8px 0;
+
+    .menu-card .price {
       font-weight: bold;
-      color: #222;
+      color: #333;
+      margin: 0 1rem 1rem;
     }
+
     .order-btn {
       display: inline-block;
-      background: var(--plum);
-      color: white;
-      padding: 8px 16px;
-      border-radius: 6px;
+      background: var(--lilac);
+      color: #fff;
       text-decoration: none;
-      font-size: 14px;
-      transition: background 0.3s;
+      padding: 0.7rem 1.2rem;
+      border-radius: 8px;
+      margin: 0 1rem 1.5rem;
+      font-weight: 500;
+      transition: background 0.3s ease, transform 0.2s ease;
     }
+
     .order-btn:hover {
-      background: #5a275a;
+      background: #4a1f5f;
+      transform: scale(1.05);
     }
   </style>
 </head>
 <body>
 
   <!-- Navbar -->
-  <div class="navbar">
-    <h1>Zaika Express</h1>
+  <nav>
+    <div class="logo"> <img src="images/Z-modified.png" height="40px">&nbsp;&nbsp; Zaika Express</div>
     <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="starters.html" class="active">Starters</a></li>
-      <li><a href="maincourse.html">Main Course</a></li>
-      <li><a href="biryani-specials.html">Biryani Specials</a></li>
-      <li><a href="desserts.html">Desserts</a></li>
-      <li><a href="beverages.html">Beverages</a></li>
-      <li><a href="contact.html">Contact</a></li>
+      <li><a href="index.html"><b>Home</b></a></li>
+      <li><a href="menu.html" style="background: var(--lilac); color: white;"><b>Menu</b></a></li>
+      <li><a href="offers.html"><b>Offers</b></a></li>
+      <li><a href="contact.html"><b>Contact</b></a></li>
+      <li><a href="about.html"><b>About</b></a></li>
+      <li><a href="terms.html"><b>Terms</b></a></li>
+      <li><a href="login.html"><b>Login</b></a></li>
+      <li><a href="registration.html"><b>Register</b></a></li>
+      <img src="images/user.png" height="30px"><a href="userprofile.html"><b>Profile</b></a>
     </ul>
-  </div>
+  </nav>
 
-  <!-- Banner -->
-  <div class="banner">
-    <h2>Biryani Specials</h2>
-    <p>Kickstart your meal with our delicious range of appetizers</p>
-  </div>
+  <!-- Hero Banner -->
+  <section class="hero">
+    <h1>Biryani Specials</h1>
+    <p>Kickstart your meal with our delicious range of biryanis</p>
+  </section>
 
-  <!-- Menu Grid (Sample 3 out of 20 items) -->
+  <!-- Biryani Menu -->
   <div class="menu-container">
 
-    <div class="menu-item">
+    <div class="menu-card">
       <img src="images/hydrabadi-biryani.png" alt="hydrabadi-biryani">
-      <div class="menu-info">
-        <h3>Hydrabadi Biryani</h3>
-        <p>A rich, spicy dum-cooked biryani with saffron and fried onions.</p>
-        <span>₹400</span>
-        <a href="cart.html?item=hydrabadi-biryani" class="order-btn">Order Now</a>
-      </div>
+      <h3>Hyderabadi Biryani</h3>
+      <p>A rich, spicy dum-cooked biryani with saffron and fried onions.</p>
+      <p class="price">₹400</p>
+      <a href="cart.html?item=hydrabadi-biryani" class="order-btn">Order Now</a>
     </div>
 
-    <div class="menu-item">
+    <div class="menu-card">
       <img src="images/kashmiri-biryani.png" alt="kashmiri-biryani">
-      <div class="menu-info">
-        <h3>Kashmiri Biryani</h3>
-        <p>A mildly spiced biryani infused with dry fruits, nuts, and aromatic saffron, reflecting the royal flavors of Kashmir.</p>
-        <span>₹380</span>
-        <a href="cart.html?item=kashmiri-biryani" class="order-btn">Order Now</a>
-      </div>
-     </div>
-
-    <div class="menu-item">
-      <img src="images/afghani-biryani.png" alt="afghani-biryani">
-      <div class="menu-info">
-        <h3>Afghani Biryani</h3>
-        <p> A royal-style biryani made with succulent chicken, mild spices, saffron, and garnished with dry fruits for a rich, creamy flavor.</p>
-        <span>₹350</span>
-        <a href="cart.html?item=afghani-biryani" class="order-btn">Order Now</a>
-      </div>
+      <h3>Kashmiri Biryani</h3>
+      <p>A mildly spiced biryani infused with dry fruits, nuts, and aromatic saffron.</p>
+      <p class="price">₹380</p>
+      <a href="cart.html?item=kashmiri-biryani" class="order-btn">Order Now</a>
     </div>
-    
-       <div class="menu-item">
+
+    <div class="menu-card">
+      <img src="images/afghani-biryani.png" alt="afghani-biryani">
+      <h3>Afghani Biryani</h3>
+      <p>Royal-style biryani with succulent chicken, mild spices, saffron, and dry fruits.</p>
+      <p class="price">₹350</p>
+      <a href="cart.html?item=afghani-biryani" class="order-btn">Order Now</a>
+    </div>
+
+    <div class="menu-card">
       <img src="images/seekh-biryani.png" alt="seekh-biryani">
-      <div class="menu-info">
-        <h3>Seekh Biryani</h3>
-        <p> A flavorful biryani layered with spiced chicken seekh kebabs, fragrant basmati rice, and aromatic herbs for a smoky twist.</p>
-        <span>₹450</span>
-        <a href="cart.html?item=seekh-biryani" class="order-btn">Order Now</a>
-      </div>
-       </div>
-     <div class="menu-item">
+      <h3>Seekh Biryani</h3>
+      <p>Biryani layered with spiced chicken seekh kebabs and aromatic herbs.</p>
+      <p class="price">₹450</p>
+      <a href="cart.html?item=seekh-biryani" class="order-btn">Order Now</a>
+    </div>
+
+    <div class="menu-card">
       <img src="images/paneer-tikka-biryani.png" alt="paneer-tikka-biryani">
-      <div class="menu-info">
-        <h3>Paneer Tikka Biryani</h3>
-        <p>Fragrant basmati rice layered with smoky, marinated paneer tikka, fresh herbs, and mild spices for a rich vegetarian delight.</p>
-        <span>₹250</span>
-        <a href="cart.html?item=paneer-tikka-biryani" class="order-btn">Order Now</a>
-      </div>
-     </div>
-      <div class="menu-item">
+      <h3>Paneer Tikka Biryani</h3>
+      <p>Fragrant rice with smoky paneer tikka, fresh herbs, and mild spices.</p>
+      <p class="price">₹250</p>
+      <a href="cart.html?item=paneer-tikka-biryani" class="order-btn">Order Now</a>
+    </div>
+
+    <div class="menu-card">
       <img src="images/sindhi-biryani.png" alt="sindhi-biryani">
-      <div class="menu-info">
-        <h3>Sindhi Biryani</h3>
-        <p>Fiery, flavorful biryani loaded with yogurt, chilies, and herbs.</p>
-        <span>₹200</span>
-        <a href="cart.html?item=sindhi-biryani" class="order-btn">Order Now</a>
-      </div>
-      </div>
-       <div class="menu-item">
+      <h3>Sindhi Biryani</h3>
+      <p>Fiery, flavorful biryani loaded with yogurt, chilies, and herbs.</p>
+      <p class="price">₹200</p>
+      <a href="cart.html?item=sindhi-biryani" class="order-btn">Order Now</a>
+    </div>
+
+    <div class="menu-card">
       <img src="images/kolkata-biryani.png" alt="kolkata-biryani">
-      <div class="menu-info">
-        <h3>Kolkata Biryani</h3>
-        <p>Light, aromatic biryani flavored with chicken and boiled eggs.</p>
-        <span>₹270</span>
-        <a href="cart.html?item=kolkata-biryani" class="order-btn">Order Now</a>
-      </div>
-      </div>
-      <div class="menu-item">
+      <h3>Kolkata Biryani</h3>
+      <p>Light, aromatic biryani flavored with chicken and boiled eggs.</p>
+      <p class="price">₹270</p>
+      <a href="cart.html?item=kolkata-biryani" class="order-btn">Order Now</a>
+    </div>
+
+    <div class="menu-card">
       <img src="images/egg-biryani.png" alt="egg-biryani">
-      <div class="menu-info">
-        <h3>Egg Biryani</h3>
-        <p>A hearty biryani made with boiled eggs, fragrant basmati rice, and a blend of aromatic spices for a wholesome taste.</p>
-        <span>₹200</span>
-        <a href="cart.html?item=egg-biryani" class="order-btn">Order Now</a>
-      </div>
-      </div>
-        <div class="menu-item">
+      <h3>Egg Biryani</h3>
+      <p>Hearty biryani made with boiled eggs and fragrant spices.</p>
+      <p class="price">₹200</p>
+      <a href="cart.html?item=egg-biryani" class="order-btn">Order Now</a>
+    </div>
+
+    <div class="menu-card">
       <img src="images/veg-biryani.png" alt="veg-biryani">
-      <div class="menu-info">
-        <h3>Veg Biryani</h3>
-        <p>A flavorful mix of fresh vegetables, basmati rice, and aromatic spices cooked together for a wholesome vegetarian delight.</p>
-        <span>₹160</span>
-        <a href="cart.html?item=veg-biryani" class="order-btn">Order Now</a>
-      </div>
-      </div> 
-        <div class="menu-item">
+      <h3>Veg Biryani</h3>
+      <p>Fresh vegetables and aromatic spices cooked with basmati rice.</p>
+      <p class="price">₹160</p>
+      <a href="cart.html?item=veg-biryani" class="order-btn">Order Now</a>
+    </div>
+
+    <div class="menu-card">
       <img src="images/tandoori-biryani.png" alt="tandoori-biryani">
-      <div class="menu-info">
-        <h3>Tandoori Biryani</h3>
-        <p>A smoky biryani layered with tandoori-marinated chicken, fragrant basmati rice, and bold spices for a fiery flavor.</p>
-        <span>₹500</span>
-        <a href="cart.html?item=tandoori-biryani" class="order-btn">Order Now</a>
-      </div>
-      </div>  
-        <div class="menu-item">
+      <h3>Tandoori Biryani</h3>
+      <p>Smoky biryani layered with tandoori-marinated chicken and bold spices.</p>
+      <p class="price">₹500</p>
+      <a href="cart.html?item=tandoori-biryani" class="order-btn">Order Now</a>
+    </div>
+
+    <div class="menu-card">
       <img src="images/prawn-biryani.png" alt="prawn-biryani">
-      <div class="menu-info">
-        <h3>Prawn Biryani</h3>
-        <p>Juicy prawns cooked with fragrant basmati rice, coastal spices, and herbs for a rich and aromatic seafood delight.</p>
-        <span>₹350</span>
-        <a href="cart.html?item=prawn-biryani" class="order-btn">Order Now</a>
-      </div>
-      </div>  
-        <div class="menu-item">
+      <h3>Prawn Biryani</h3>
+      <p>Juicy prawns cooked with coastal spices and fragrant rice.</p>
+      <p class="price">₹350</p>
+      <a href="cart.html?item=prawn-biryani" class="order-btn">Order Now</a>
+    </div>
+
+    <div class="menu-card">
       <img src="images/muradabadi-biryani.png" alt="muradabadi-biryani">
-      <div class="menu-info">
-        <h3>Muradabadi Biryani</h3>
-        <p>A light yet flavorful biryani from Uttar Pradesh, slow-cooked with tender meat, minimal spices, and fragrant rice for a rustic taste.</p>
-        <span>₹250</span>
-        <a href="cart.html?item=muradabadi-biryani" class="order-btn">Order Now</a>
-      </div>
-      </div>
-       
+      <h3>Muradabadi Biryani</h3>
+      <p>Rustic biryani from UP, slow-cooked with tender meat and minimal spices.</p>
+      <p class="price">₹250</p>
+      <a href="cart.html?item=muradabadi-biryani" class="order-btn">Order Now</a>
+    </div>
+
   </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Zaika Express | All Rights Reserved</p>
+    <p>
+      <a href="privacy.html">Privacy Policy</a> |
+      <a href="faq.html">FAQ</a> |
+      <a href="contact.html">Contact</a>
+    </p>
+  </footer>
+
 </body>
 </html>

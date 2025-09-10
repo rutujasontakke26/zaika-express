@@ -1,76 +1,254 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Zaika Express | Offers & Discounts</title>
-    <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zaika Express - Offers</title>
+  <style>
+    /* ================================
+       Zaika Express Theme - Lavender & Modern
+       ================================ */
+    :root {
+      --rosewater: #f8c0c8;
+      --ivory: #efe7d3;
+      --lilac: #6a3183;
+      --pewter: #ece3f0;
+    }
+
+    body {
+      font-family: "Poppins", sans-serif;
+      background-color: var(--ivory);
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    /* Navbar */
+    nav {
+      background: var(--rosewater);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav .logo {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #333;
+      font-family: "Georgia", serif;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      font-weight: 500;
+      color: #333;
+      transition: all 0.3s ease;
+      padding: 0.3rem 0.6rem;
+      border-radius: 6px;
+    }
+
+    nav ul li a:hover,
+    nav ul li a.active {
+      background-color: var(--lilac);
+      color: white;
+    }
+
+    /* Banner */
+    .offer-banner {
+      background: linear-gradient(135deg, var(--rosewater), var(--lilac));
+      color: white;
+      text-align: center;
+      padding: 4rem 2rem;
+      border-bottom-left-radius: 40px;
+      border-bottom-right-radius: 40px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    }
+
+    .offer-banner h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      font-family: "Georgia", serif;
+    }
+
+    .offer-banner p {
+      font-size: 1.2rem;
+      opacity: 0.9;
+    }
+
+    /* Offers Section */
+    .offers {
+      max-width: 1100px;
+      margin: 3rem auto;
+      padding: 0 1.5rem;
+    }
+
+    .offers h2 {
+      text-align: center;
+      font-family: "Georgia", serif;
+      color: var(--lilac);
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .offer-card {
+      display: flex;
+      align-items: center;
+      background: white;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      margin-bottom: 2rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .offer-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+    }
+
+    .offer-card img {
+      width: 40%;
+      height: 220px;
+      object-fit: cover;
+    }
+
+    .offer-details {
+      padding: 1.5rem;
+      flex: 1;
+    }
+
+    .offer-details h3 {
+      font-size: 1.6rem;
+      margin-top: 0;
+      color: var(--lilac);
+    }
+
+    .offer-details p {
+      margin: 0.5rem 0 1rem;
+      line-height: 1.6;
+      color: #444;
+    }
+
+    .offer-details .btn {
+      display: inline-block;
+      background: var(--lilac);
+      color: white;
+      padding: 0.6rem 1.2rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.3s ease;
+    }
+
+    .offer-details .btn:hover {
+      background: var(--rosewater);
+      color: #333;
+    }
+
+    /* Footer */
+    footer {
+      background-color: var(--pewter);
+      padding: 2rem 1rem;
+      text-align: center;
+      margin-top: 3rem;
+      border-top: 3px solid var(--rosewater);
+    }
+
+    footer p {
+      margin: 0.5rem 0;
+    }
+
+    footer a {
+      color: #333;
+      margin: 0 0.8rem;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    footer a:hover {
+      color: var(--lilac);
+    }
+  </style>
 </head>
 <body>
-<!-- Navbar -->
+
+  <!-- Navbar -->
   <nav>
-    <div class="logo">Zaika Express</div>
+    <div class="logo"> <img src="images/Z-modified.png" height="40px">&nbsp;&nbsp; Zaika Express</div>
     <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="menu.html">Menu</a></li>
-      <li><a href="offers.html">Offers</a></li>
-      <li><a href="about.html" class="active">About</a></li>
-      <li><a href="contact.html">Contact</a></li>
+      <li><a href="index.html"><b>Home</b></a></li>
+      <li><a href="menu.html"><b>Menu</b></a></li>
+      <li><a href="offers.html"style="background: var(--lilac); color: white;"><b>Offers</b></a></li>
+      <li><a href="contact.html"><b>Contact</b></a></li>
+      <li><a href="about.html"><b>About</b></a></li>
+      <li><a href="terms.html"><b>Terms</b></a></li>
+      <li><a href="login.html"><b>Login</b></a></li>
+      <li><a href="registration.html"><b>Register</b></a></li>
+      <img src="images/user.png" height="30px"><a href="userprofile.html"><b>Profile</b></a>
     </ul>
   </nav>
-  <header>
-    <h1>Zaika Express – Offers & Discounts</h1>
-  </header>
 
-  <main>
-    <div class="offers-grid">
+  <!-- Banner -->
+  <section class="offer-banner">
+    <h1>Delicious Deals, Just For You!</h1>
+    <p>Grab the hottest food offers and savor more flavors for less.</p>
+  </section>
 
-      <div class="offer-card">
-        <div class="offer-title">🔥 Flat 20% Off on First Order</div>
-        <div class="offer-description">
-          New to Zaika Express? Get 20% off on your first order. Use code: <strong>WELCOME20</strong>
-        </div>
-        <div class="offer-validity">Valid till: Sept 30, 2025</div>
+  <!-- Offers Section -->
+  <section class="offers">
+    <h2>Today's Hot Deals</h2>
+
+    <div class="offer-card">
+      <img src="images/paneer-pizza.png" alt="Pizza Offer">
+      <div class="offer-details">
+        <h3>Flat 20% Off on Pizzas</h3>
+        <p>Enjoy our cheesy delights with a special discount. Perfect for sharing with friends & family.</p>
+        <a href="menu.html" class="btn">Order Now</a>
       </div>
-
-      <div class="offer-card">
-        <div class="offer-title">🎉 Weekend Special: ₹100 Cashback</div>
-        <div class="offer-description">
-          Order above ₹499 on weekends and get ₹100 cashback in your Zaika Wallet.
-        </div>
-        <div class="offer-validity">Valid every Saturday & Sunday</div>
-      </div>
-
-      <div class="offer-card">
-        <div class="offer-title">🍔 Buy 1 Get 1 Free - Street Food</div>
-        <div class="offer-description">
-          Enjoy BOGO on select street food items every Tuesday. Automatically applied at checkout.
-        </div>
-        <div class="offer-validity">Valid on Tuesdays only</div>
-      </div>
-
-      <div class="offer-card">
-        <div class="offer-title">💳 10% Off on UPI Payments</div>
-        <div class="offer-description">
-          Pay via Google Pay, PhonePe, or Paytm UPI to get an extra 10% off (max ₹75).
-        </div>
-        <div class="offer-validity">Valid till: Oct 15, 2025</div>
-      </div>
-
-      <div class="offer-card">
-        <div class="offer-title">🎁 Refer & Earn</div>
-        <div class="offer-description">
-          Invite your friends and earn ₹150 in credits when they place their first order!
-        </div>
-        <div class="offer-validity">Ongoing offer</div>
-      </div>
-
     </div>
-  </main>
-<br>
-<br>
+
+    <div class="offer-card">
+      <img src="images/afghani-biryani.png" alt="Biryani Offer">
+      <div class="offer-details">
+        <h3>Biryani Lovers Combo - ₹299</h3>
+        <p>Indulge in our royal biryani combo with raita & soft drink. A wholesome meal at an unbeatable price!</p>
+        <a href="menu.html" class="btn">Order Now</a>
+      </div>
+    </div>
+
+    <div class="offer-card">
+      <img src="images/kajukatli.png" alt="Dessert Offer">
+      <div class="offer-details">
+        <h3>Buy 1 Get 1 Free on Desserts</h3>
+        <p>Double the sweetness, zero extra cost! Pick your favorite dessert and get another one free.</p>
+        <a href="menu.html" class="btn">Order Now</a>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Footer -->
   <footer>
-    &copy; 2025 Zaika Express. Tasty deals delivered to your doorstep.
+    <p>&copy; 2025 Zaika Express. All Rights Reserved.</p>
+    <p>
+      <a href="#">Facebook</a> | 
+      <a href="#">Instagram</a> | 
+      <a href="#">Twitter</a>
+    </p>
   </footer>
 
 </body>
