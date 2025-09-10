@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Zaika Express | Cart</title>
   <link rel="stylesheet" href="style.css">
+  <script src="cart.js" defer></script>
   <style>
     /* Cart Specific Styling */
     .cart-container {
@@ -92,9 +93,10 @@
       <li><a href="index.html"><b>Home</b></a></li>
       <li><a href="menu.html"><b>Menu</b></a></li>
       <li><a href="offers.html"><b>Offers</b></a></li>
+      <li><a href="cart.html" style="background: var(--lilac); color: white;"><b>Cart</b></a></li>
       <li><a href="contact.html"><b>Contact</b></a></li>
       <li><a href="about.html"><b>About</b></a></li>
-      <li><a href="terms.html" style="background: var(--lilac); color: white;"><b>Terms</b></a></li>
+      <li><a href="terms.html"><b>Terms</b></a></li>
       <li><a href="login.html"><b>Login</b></a></li>
       <li><a href="registration.html"><b>Register</b></a></li>
       <img src="images/user.png" height="30px"><a href="userprofile.html"><b>Profile</b></a>
@@ -142,6 +144,7 @@
           <td>₹160</td>
         </tr>
       </tbody>
+      <tbody id="cart-items"></tbody>
     </table>
 
     <div class="cart-total">
@@ -153,7 +156,6 @@
       <a href="checkout.html"><button class="btn btn-checkout">Proceed to Checkout →</button></a>
     </div>
   </div>
-
   <!-- Footer -->
   <footer>
     <p>&copy; 2025 Zaika Express | All Rights Reserved</p>
