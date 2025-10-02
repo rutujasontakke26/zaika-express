@@ -107,7 +107,7 @@
       <h3>Butter Chicken</h3>
       <p>Chicken in buttery tomato sauce</p>
       <p class="price">₹350</p>
-     <a href="cart.html" class="order-btn">Order Now</a>
+     <button onclick="addToCart('Butter Chicken', 350, 'images/butter-chicken.png')" class="order-btn">Add to Cart</button>
     </div>
 
     <div class="menu-card">
@@ -115,15 +115,15 @@
       <h3>Paneer Butter Masala</h3>
       <p>Cottage cheese in rich tomato and butter gravy</p>
       <p class="price">₹150</p>
-       <a href="cart.html" class="order-btn">Order Now</a>
+      <button onclick="addToCart('Paneer Butter Masala',150, 'images/paneer-butter-masala.png')" class="order-btn">Add to Cart</button>
     </div>
 
     <div class="menu-card">
       <img src="images/pav-bhaji.png" alt="pav-bhaji">
       <h3>Pav Bhaji</h3>
       <p>Mashed vegetable curry served with buttered bread</p>
-      <p class="price">₹100</p>
-      <a href="cart.html" class="order-btn">Order Now</a>
+      <p class="price">₹80</p>
+      <button onclick="addToCart('Pav Bhaji', 80, 'images/pav-bhaji.png')" class="order-btn">Add to Cart</button>
     </div>
 
     <div class="menu-card">
@@ -131,7 +131,7 @@
       <h3>Daal Makhni</h3>
       <p>Creamy black lentils cooked with butter and spices</p>
       <p class="price">₹180</p>
-      <a href="cart.html" class="order-btn">Order Now</a>
+      <button onclick="addToCart('Daal Makhni', 180, 'images/daal-makhni.png')" class="order-btn">Add to Cart</button>
     </div>
 
     <div class="menu-card">
@@ -139,7 +139,7 @@
       <h3>Chicken Tikka Masala</h3>
       <p>Grilled chicken in creamy masala sauce</p>
       <p class="price">₹250</p>
-       <a href="cart.html" class="order-btn">Order Now</a>
+      <button onclick="addToCart('Chicken Tikka Masala', 250, 'images/chicken-tikka-masala.png')" class="order-btn">Add to Cart</button>
     </div>
 
     <div class="menu-card">
@@ -147,7 +147,7 @@
       <h3>Palak Paneer</h3>
       <p>Cottage cheese in spinach curry</p>
       <p class="price">₹200</p>
-      <a href="cart.html" class="order-btn">Order Now</a>
+      <button onclick="addToCart('Palak Paneer', 200, 'images/palak-paneer.png')" class="order-btn">Add to Cart</button>
     </div>
 
     <div class="menu-card">
@@ -155,7 +155,7 @@
       <h3>Kadhai Paneer</h3>
       <p>Paneer cooked in a spiced tomato-onion gravy</p>
       <p class="price">₹270</p>
-       <a href="cart.html" class="order-btn">Order Now</a>
+       <button onclick="addToCart('Kadhai Paneer', 270, 'images/kadhai-paneer.png')" class="order-btn">Add to Cart</button>
     </div>
 
     <div class="menu-card">
@@ -163,7 +163,7 @@
       <h3>Veg Kolhapuri</h3>
       <p>Spicy mixed vegetable curry from Maharashtra</p>
       <p class="price">₹280</p>
-       <a href="cart.html" class="order-btn">Order Now</a>
+      <button onclick="addToCart('Veg Kolhapuri', 280, 'images/veg-kolhapuri.png')" class="order-btn">Add to Cart</button>
     </div>
 
     <div class="menu-card">
@@ -171,7 +171,7 @@
       <h3>Egg Curry</h3>
       <p>Boiled eggs in onion-tomato gravy</p>
       <p class="price">₹160</p>
-      <a href="cart.html" class="order-btn">Order Now</a>
+      <button onclick="addToCart('Egg Curry', 160, 'images/egg-curry.png')" class="order-btn">Add to Cart</button>
     </div>
 
     <div class="menu-card">
@@ -179,7 +179,7 @@
       <h3>Chicken Korma</h3>
       <p>Mild creamy chicken curry</p>
       <p class="price">₹300</p>
-      <a href="cart.html" class="order-btn">Order Now</a>
+      <button onclick="addToCart('Chicken Korma',300, 'images/chicken-korma.png')" class="order-btn">Add to Cart</button>
     </div>
 
     <div class="menu-card">
@@ -187,7 +187,7 @@
       <h3>Chicken Afghani</h3>
       <p>Creamy cashew & cream-based chicken curry</p>
       <p class="price">₹300</p>
-       <a href="cart.html" class="order-btn">Order Now</a>
+      <button onclick="addToCart('Chicken Afghani', 300, 'images/chicken-afghani.png')" class="order-btn">Add to Cart</button>
     </div>
 
     <div class="menu-card">
@@ -195,7 +195,7 @@
       <h3>Chicken Handi</h3>
       <p>Rich creamy chicken curry cooked in handi</p>
       <p class="price">₹400</p>
-       <a href="cart.html" class="order-btn">Order Now</a>
+      <button onclick="addToCart('Chicken Handi', 400, 'images/chicken-handi.png')" class="order-btn">Add to Cart</button>
     </div>
 
   </div>
@@ -210,5 +210,14 @@
       <a href="customer.html">Customer Reviews</a>
     </p>
   </footer>
+  <script>
+  function addToCart(name, price, image) {
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    cart.push({ name, price, image });
+    localStorage.setItem("cart", JSON.stringify(cart));
+    alert(name + " added to cart!");
+  }
+</script>
+
 </body>
 </html>

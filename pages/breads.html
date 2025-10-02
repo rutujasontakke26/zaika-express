@@ -104,8 +104,8 @@
       <img src="images/butternaan.jpeg" alt="Butter Naan">
       <h3>Butter Naan</h3>
       <p>Soft, fluffy naan brushed with rich butter – the perfect companion for curries.</p>
-      <p class="price">₹60</p>
-     <a href="cart.html" class="order-btn">Order Now</a>
+      <p class="price">₹40</p>
+     <button onclick="addToCart('Butter Naan', 40, 'images/butternaan.jpeg')" class="order-btn">Add to Cart</button>
     </div>
 
     <div class="menu-card">
@@ -113,15 +113,15 @@
       <h3>Tandoori Roti</h3>
       <p>Whole wheat flatbread baked in a traditional tandoor for a smoky flavor.</p>
       <p class="price">₹40</p>
-      <a href="cart.html" class="order-btn">Order Now</a>
+      <button onclick="addToCart('Tandoori Roti', 40, 'images/Roti (tandoori).jpeg')" class="order-btn">Add to Cart</button>
     </div>
 
     <div class="menu-card">
       <img src="images/Delicious Garlic Naan Recipe!.jpeg" alt="Garlic Naan">
       <h3>Garlic Naan</h3>
       <p>Classic naan infused with fresh garlic and coriander for extra flavor.</p>
-      <p class="price">₹70</p>
-      <a href="cart.html" class="order-btn">Order Now</a>
+      <p class="price">₹50</p>
+      <button onclick="addToCart('Garlic Naan', 50, 'images/Delicious Garlic Naan Recipe!.jpeg')" class="order-btn">Add to Cart</button>
     </div>
 
     <div class="menu-card">
@@ -129,7 +129,7 @@
       <h3>Lachha Paratha</h3>
       <p>Layered, crispy yet soft paratha, made with love for flaky goodness.</p>
       <p class="price">₹55</p>
-       <a href="cart.html" class="order-btn">Order Now</a>
+      <button onclick="addToCart('Lachha Paratha', 55, 'images/lachhaparatha.jpeg')" class="order-btn">Add to Cart</button>
     </div>
 
     <div class="menu-card">
@@ -137,7 +137,7 @@
       <h3>Missi Roti</h3>
       <p>Nutritious roti made with a mix of wheat flour and gram flour, spiced lightly.</p>
       <p class="price">₹50</p>
-      <a href="cart.html" class="order-btn">Order Now</a>
+      <button onclick="addToCart('Missi Roti', 50, 'images/missiroti.jpeg')" class="order-btn">Add to Cart</button>
     </div>
 
     <div class="menu-card">
@@ -145,7 +145,7 @@
       <h3>Stuffed Kulcha</h3>
       <p>Soft kulcha stuffed with spiced potatoes or paneer, baked golden.</p>
       <p class="price">₹80</p>
-      <a href="cart.html" class="order-btn">Order Now</a>
+      <button onclick="addToCart('Stuffed Kulcha', 80, 'images/stuffedkulche.jpeg')" class="order-btn">Add to Cart</button>
     </div>
 
     <div class="menu-card">
@@ -153,7 +153,7 @@
       <h3>Chapati</h3>
       <p>a soft, thin, circular, unleavened flatbread made from whole wheat flour (atta).</p>
       <p class="price">₹40</p>
-      <a href="cart.html" class="order-btn">Order Now</a>
+      <button onclick="addToCart('Chapati', 40, 'images/chapati.jpeg')" class="order-btn">Add to Cart</button>
     </div>
     
     <div class="menu-card">
@@ -161,8 +161,7 @@
       <h3>Bhakri</h3>
       <p>Srustic traditional, thick, unleavened Bajra flatbread.</p>
       <p class="price">₹50</p>
-       <a href="cart.html" class="order-btn">Order Now</a>
-    </div>
+      <button onclick="addToCart('Bhakri', 50, 'images/bhakri.jpeg')" class="order-btn">Add to Cart</button>
   </div>
 
   <!-- Footer -->
@@ -175,6 +174,15 @@
       <a href="customer.html">Customer Reviews</a>
     </p>
   </footer>
+<script>
+  function addToCart(name, price, image) {
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    cart.push({ name, price, image });
+    localStorage.setItem("cart", JSON.stringify(cart));
+    alert(name + " added to cart!");
+  }
+</script>
+
 
 </body>
 </html>
